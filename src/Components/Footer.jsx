@@ -79,7 +79,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="/smm"
                   className="hover:text-white transition-colors flex items-center gap-1.5 group"
                 >
                   <span className="w-1 h-1 bg-[#D4AF37]/50 rounded-full group-hover:w-2 transition-all" />
@@ -88,7 +88,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="/ads"
                   className="hover:text-white transition-colors flex items-center gap-1.5 group"
                 >
                   <span className="w-1 h-1 bg-[#D4AF37]/50 rounded-full group-hover:w-2 transition-all" />
@@ -106,7 +106,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="/video"
                   className="hover:text-white transition-colors flex items-center gap-1.5 group"
                 >
                   <span className="w-1 h-1 bg-[#D4AF37]/50 rounded-full group-hover:w-2 transition-all" />
@@ -115,7 +115,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="/content"
                   className="hover:text-white transition-colors flex items-center gap-1.5 group"
                 >
                   <span className="w-1 h-1 bg-[#D4AF37]/50 rounded-full group-hover:w-2 transition-all" />
@@ -133,7 +133,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="/ai"
                   className="hover:text-white transition-colors flex items-center gap-1.5 group"
                 >
                   <span className="w-1 h-1 bg-[#D4AF37]/50 rounded-full group-hover:w-2 transition-all" />

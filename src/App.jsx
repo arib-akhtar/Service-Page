@@ -15,11 +15,17 @@ import MarketingPage from './Components/MarketingPage'
 import Terms from './Components/Terms'
 import Privacy from './Components/Privacy'
 import Hireme from './Components/Hireme'
+
+// Services Imports
 import GraphicDesigning from './Components/Services/GraphicDesigning'
 import WebDevelopment from './Components/Services/WebDevelopment'
 import SocialMediaManagement from './Components/Services/SocialMediaManagement'
+import AdCreatives from './Components/Services/AdCreatives'
+import VideoEditing from './Components/Services/VideoEditing'
+import ContentManagement from './Components/Services/ContentManagement'
+import AIAutomation from './Components/Services/AIAutomation'
 
-// 1. ChatWidget component ko import karein (path apne folder structure ke hisaab se check kar lein)
+// ChatWidget Component
 import ChatWidget from './ChatWidget' 
 
 function App() {
@@ -45,12 +51,12 @@ function App() {
         {/* Service Routes */}
         <Route path="/marketing" element={<MarketingPage />} />
         <Route path="/smm" element={<SocialMediaManagement />} />
-        <Route path="/ads" element={<div className="pt-24 text-center text-white text-3xl">Ad Creatives Page</div>} />
+        <Route path="/ads" element={<AdCreatives />} />
         <Route path="/graphicdesigning" element={<GraphicDesigning />} />
-        <Route path="/video" element={<div className="pt-24 text-center text-white text-3xl">Video Editing Page</div>} />
-        <Route path="/content" element={<div className="pt-24 text-center text-white text-3xl">Content Management Page</div>} />
-        <Route path="/web-development" element={<WebDevelopment/>} />
-        <Route path="/ai" element={<div className="pt-24 text-center text-white text-3xl">AI Tools & Automation Page</div>} />
+        <Route path="/video" element={<VideoEditing />} />
+        <Route path="/content" element={<ContentManagement />} />
+        <Route path="/web-development" element={<WebDevelopment />} />
+        <Route path="/ai" element={<AIAutomation />} />
 
         {/* Extra Pages Routes */}
         <Route path="/terms" element={<Terms />} />
@@ -59,10 +65,7 @@ function App() {
       </Routes>
       
       <Footer />
-
-      {/* 2. Yahan ChatWidget add kar diya hai, jisse yeh har route par dikhega */}
       <ChatWidget />
-      
     </BrowserRouter>
   )
 }

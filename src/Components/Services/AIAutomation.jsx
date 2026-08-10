@@ -1,0 +1,292 @@
+import React, { useState, useEffect, useRef } from 'react';
+import LuxuryOrbBackground from '../Background';
+
+const whatsappNumber = '918789963987';
+const whatsappLink = (message) => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+const designItems = [
+  ['📱', 'WhatsApp Automation', 'Save WhatsApp chats to Google Sheets. Send fast follow-ups in real time.'],
+  ['🤖', 'AI Chatbots', 'Smart bots answer 80% of customer questions. They chat just like real humans.'],
+  ['📊', 'Auto Reports', 'Get reports sent to you. Track your growth with no manual work.'],
+  ['🔗', 'Tool Connections', 'Connect all your apps. Make your tools share data as one fast system.'],
+  ['🎯', 'Lead AI', 'Score leads with AI. Find hot buyers 24/7 and send them to your team.'],
+  ['⚡', 'Workflow Automations', 'Run workflows via Zapier or Make. Automate onboarding and invoicing tasks.'],
+];
+
+const designPlans = [
+  {
+    name: 'Starter Automation Pack', price: '₹8,000',
+    features: ['WhatsApp Webhook Integration', 'Basic AI Chatbot Setup', 'Google Sheets Lead Sync', 'Zapier / Make Workflow Connection', '1 Round of Optimization'],
+  },
+  {
+    name: 'Enterprise AI & Bot Suite', price: '₹20,000', popular: true,
+    features: ['Advanced 24/7 AI Chatbot Suite', 'Multi-Platform Lead Scoring AI', 'Automated Reporting Dashboards', 'Dedicated Automation Engineer', 'Unlimited Revisions', 'Priority WhatsApp Support'],
+  },
+];
+
+const generateReviews = () => {
+  const generated = [];
+  const names = ["Shweta Martin", "Sunita Brown", "Ritu Hegde", "Rashmi Banerjee", "Pallavi Parmar", "Sakshi Wilson", "Rekha Patel", "Suresh Bhat", "Rashmi Lee", "Jessica Lopez", "Amitabh Roy", "Pooja Sharma", "Karan Malhotra", "Divya Sen", "Vikramaditya Rao"];
+  const cities = ["London", "London", "Coimbatore", "Coimbatore", "Sydney", "Lucknow", "Coimbatore", "San Francisco", "London", "Singapore", "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Pune"];
+  const comments5 = [
+    "Our WhatsApp webhook setup by NexaSeva creates an airtight lead capture system. Every inquiry is logged and tracked automatically.",
+    "Our client onboarding is fully automated through NexaSeva's Make.com workflows. From inquiry to kickoff — zero manual steps.",
+    "NexaSeva's social media automation ensures every planned post goes live on time, on every platform, without manual intervention.",
+    "NexaSeva automated our reporting across 5 platforms. Every Monday, a comprehensive report appears automatically. Brilliant.",
+    "NexaSeva's intelligent email system uses AI to sort, categorize, and route messages. Response accuracy and speed improved dramatically."
+  ];
+  const comments4 = [
+    "Our weekly performance reports are now fully automated by NexaSeva. Data from multiple sources, one cohesive document.",
+    "Our WhatsApp webhook setup by NexaSeva creates an airtight lead capture system. Every inquiry is logged and tracked automatically.",
+    "NexaSeva's onboarding automation on Make.com guides clients from first contact to project start without any manual intervention.",
+    "Our AI chatbot by NexaSeva resolves 80% of customer inquiries instantly. Support team now focuses only on complex issues."
+  ];
+  const comments3 = [
+    "Good overall automation setup delivered, though minor workflow adjustments took an extra day.",
+    "Decent chatbot creation and webhook routing. Meets standard requirements well."
+  ];
+
+  let idCounter = 1;
+  for (let i = 0; i < 170; i++) {
+    const name = names[i % names.length] + (i > 15 ? ` ${Math.floor(i / 15)}` : '');
+    const initials = name.split(' ').map(n => n[0]).join('');
+    const city = cities[i % cities.length];
+    const text = comments5[i % comments5.length];
+    generated.push({ id: idCounter++, initials, name, location: `${city} · 8 Aug 2026`, rating: 5, text });
+  }
+  for (let i = 0; i < 97; i++) {
+    const name = names[(i + 4) % names.length] + (i > 15 ? ` ${Math.floor(i / 15)}` : '');
+    const initials = name.split(' ').map(n => n[0]).join('');
+    const city = cities[(i + 3) % cities.length];
+    const text = comments4[i % comments4.length];
+    generated.push({ id: idCounter++, initials, name, location: `${city} · 6 Aug 2026`, rating: 4, text });
+  }
+  for (let i = 0; i < 33; i++) {
+    const name = names[(i + 2) % names.length] + (i > 15 ? ` ${Math.floor(i / 15)}` : '');
+    const initials = name.split(' ').map(n => n[0]).join('');
+    const city = cities[(i + 6) % cities.length];
+    const text = comments3[i % comments3.length];
+    generated.push({ id: idCounter++, initials, name, location: `${city} · 23 Jul 2026`, rating: 3, text });
+  }
+  return generated;
+};
+
+const allReviews = generateReviews();
+const Stars = ({ rating }) => <span className="tracking-wider text-[#FFD700]">{'★'.repeat(rating)}<span className="text-zinc-700">{'★'.repeat(5 - rating)}</span></span>;
+
+export default function AIAutomation() {
+  const [filterRating, setFilterRating] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
+  const reviewsPerPage = 6;
+  const pageRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+            entry.target.classList.remove('opacity-0', 'translate-y-10', 'scale-95');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = pageRef.current.querySelectorAll('.scroll-animate');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const filteredReviews = filterRating === 'All' 
+    ? allReviews 
+    : allReviews.filter(r => r.rating === Number(filterRating));
+
+  const totalPages = Math.ceil(filteredReviews.length / reviewsPerPage);
+  const indexOfLastReview = currentPage * reviewsPerPage;
+  const indexOfFirstReview = indexOfLastReview - reviewsPerPage;
+  const currentReviews = filteredReviews.slice(indexOfFirstReview, indexOfLastReview);
+
+  const handleFilterChange = (star) => {
+    setFilterRating(star);
+    setCurrentPage(1);
+  };
+
+  const getPageNumbers = () => {
+    const pages = [];
+    if (totalPages <= 7) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      if (currentPage <= 4) {
+        pages.push(1, 2, 3, 4, 5, '...', totalPages);
+      } else if (currentPage >= totalPages - 3) {
+        pages.push(1, '...', totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+      } else {
+        pages.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+      }
+    }
+    return pages;
+  };
+
+  return (
+    <main ref={pageRef} className="min-h-screen bg-transparent text-white overflow-hidden relative">
+      <LuxuryOrbBackground />
+
+      {/* HERO SECTION */}
+      <section className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-[#FFD700] font-semibold tracking-[0.2em] text-sm mb-4">STREAM C: TECH & AUTOMATION</p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent pb-2">
+            AI Tools & Automation
+          </h1>
+          <p className="max-w-2xl mx-auto mt-6 text-gray-300 text-lg leading-relaxed">
+            We build custom bots, webhooks, and auto workflows. We automate slow tasks to help you grow. Our tools run 24/7 with no human help needed.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-9">
+            <a href="#pricing" className="rounded-full px-7 py-3 font-semibold text-black bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] hover:scale-105 transition-transform">Get a Quote</a>
+            <a href={whatsappLink("Hi Aivon Tech, I'm interested in your AI Automation services.")} target="_blank" rel="noreferrer" className="rounded-full px-7 py-3 font-semibold border border-[#D4AF37]/60 text-[#FFFACD] bg-black/30 backdrop-blur hover:bg-[#D4AF37]/10 transition-colors">💬 Chat on WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      {/* PREVIEW / SHOWCASE SECTION */}
+      <section className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-150">
+        <div className="max-w-6xl mx-auto rounded-2xl overflow-hidden border border-[#D4AF37]/30 bg-black/60 backdrop-blur-md shadow-2xl relative group">
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#FFD700]/10 via-transparent to-[#FFD700]/5 pointer-events-none"></div>
+          <div className="aspect-video flex flex-col items-center justify-center text-center p-6 relative z-10">
+            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] flex items-center justify-center shadow-lg shadow-[#FFD700]/30 mb-6 text-black text-3xl font-bold">
+              ⚡
+            </div>
+            <h2 className="text-3xl font-extrabold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent">
+              Intelligent Systems That Work While You Sleep
+            </h2>
+            <p className="text-gray-300 mt-3 max-w-xl text-base leading-relaxed">
+              Automate repetitive operations, capture leads 24/7, and scale efficiently with custom AI bots and workflows.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT WE DELIVER SECTION */}
+      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-16 bg-black/30 border-y border-white/5 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-300">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold">What We Automate</h2>
+            <p className="text-gray-400 mt-2">Intelligent systems that work while you sleep.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {designItems.map(([icon, title, text]) => (
+              <article key={title} className="p-6 rounded-xl bg-[#0a0a0a]/75 backdrop-blur border border-zinc-800 hover:border-[#D4AF37]/45 transition-colors">
+                <div className="text-3xl mb-4">{icon}</div>
+                <h3 className="font-bold text-lg text-[#FFFACD]">{title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mt-2">{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PRICING SECTION */}
+      <section id="pricing" className="relative z-10 px-4 sm:px-6 lg:px-8 py-20 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-400">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold">Custom Pricing</h2>
+            <p className="text-gray-400 mt-2">Automation Built for Your Team — tailored reviews to find what we can automate.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-7 max-w-4xl mx-auto">
+            {designPlans.map((plan) => (
+              <article key={plan.name} className={`relative p-7 rounded-2xl backdrop-blur-md border ${plan.popular ? 'border-[#D4AF37] bg-[#1a1608]/80' : 'border-zinc-700 bg-[#0a0a0a]/80'}`}>
+                {plan.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#D4AF37] text-black text-xs font-bold">Popular</span>}
+                <h3 className="text-xl font-bold">{plan.name}</h3>
+                <p className="text-3xl font-extrabold text-[#FFD700] mt-3">{plan.price}</p>
+                <ul className="my-6 space-y-3 text-sm text-gray-300">
+                  {plan.features.map((feature) => <li key={feature}>✓ <span className="ml-2">{feature}</span></li>)}
+                </ul>
+                <a href={whatsappLink(`Hi Aivon Tech, I want to discuss my automation needs for the ${plan.name} plan.`)} target="_blank" rel="noreferrer" className="block text-center rounded-full py-3 font-semibold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black">💬 Discuss Your Automation Needs</a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* REVIEWS & FILTERS SECTION */}
+      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-16 bg-black/30 border-y border-white/5 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-500">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-[#FFD700] font-semibold text-sm tracking-widest">CLIENT REVIEWS</p>
+            <h2 className="text-3xl font-bold mt-2">Client Reviews for AI Automation</h2>
+            <p className="text-gray-400 mt-2">300+ verified reviews from businesses we've helped</p>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center justify-between bg-[#0a0a0c]/80 border border-[#D4AF37]/30 p-6 rounded-2xl mb-10 gap-6 backdrop-blur-md">
+            <div className="text-center md:text-left flex items-center gap-4">
+              <strong className="text-5xl font-extrabold text-white">4.5</strong>
+              <div>
+                <div className="text-amber-400 text-lg mb-1"><Stars rating={5} /></div>
+                <p className="text-gray-400 text-sm">300 verified reviews</p>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap gap-2 justify-center">
+              <button onClick={() => handleFilterChange('All')} className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${filterRating === 'All' ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>All</button>
+              <button onClick={() => handleFilterChange(5)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filterRating === 5 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>5 ★ (170)</button>
+              <button onClick={() => handleFilterChange(4)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filterRating === 4 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>4 ★ (97)</button>
+              <button onClick={() => handleFilterChange(3)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filterRating === 3 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>3 ★ (33)</button>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+            {currentReviews.length > 0 ? (
+              currentReviews.map((rev) => (
+                <article key={rev.id} className="p-5 rounded-xl bg-[#0a0a0a]/80 border border-zinc-800 flex flex-col justify-between">
+                  <div>
+                    <div className="flex gap-3 items-center">
+                      <span className="w-10 h-10 rounded-full bg-[#D4AF37]/20 text-[#FFD700] font-bold flex items-center justify-center">{rev.initials}</span>
+                      <div>
+                        <h3 className="font-semibold text-sm">{rev.name}</h3>
+                        <p className="text-xs text-gray-500">{rev.location}</p>
+                      </div>
+                    </div>
+                    <div className="mt-4"><Stars rating={rev.rating} /></div>
+                    <p className="text-sm text-gray-400 leading-relaxed mt-3">"{rev.text}"</p>
+                  </div>
+                  <p className="text-xs text-[#D4AF37] mt-4 font-medium">✓ Verified Client</p>
+                </article>
+              ))
+            ) : (
+              <div className="col-span-full text-center py-10 text-gray-400">No reviews found for this rating filter.</div>
+            )}
+          </div>
+
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-2 flex-wrap">
+              {currentPage > 1 && (
+                <button onClick={() => setCurrentPage(currentPage - 1)} className="px-3 h-10 bg-zinc-900 hover:bg-zinc-800 text-gray-300 border border-zinc-800 rounded-lg font-medium text-sm transition-colors">← Prev</button>
+              )}
+              {getPageNumbers().map((item, index) => 
+                item === '...' ? (
+                  <span key={`dots-${index}`} className="px-3 py-2 text-gray-500 font-bold">...</span>
+                ) : (
+                  <button key={item} onClick={() => setCurrentPage(item)} className={`w-10 h-10 rounded-lg font-bold text-sm transition-colors ${currentPage === item ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:bg-zinc-800'}`}>{item}</button>
+                )
+              )}
+              {currentPage < totalPages && (
+                <button onClick={() => setCurrentPage(currentPage + 1)} className="px-3 h-10 bg-zinc-900 hover:bg-zinc-800 text-gray-300 border border-zinc-800 rounded-lg font-medium text-sm transition-colors">Next →</button>
+              )}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* CTA SECTION */}
+      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-20 text-center scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-600">
+        <div className="max-w-3xl mx-auto rounded-2xl p-8 sm:p-12 bg-[#111]/75 border border-[#D4AF37]/30 backdrop-blur-md">
+          <h2 className="text-3xl font-bold">Ready to Automate & Scale?</h2>
+          <p className="text-gray-400 mt-3">Let AI handle the busy work. Focus your time on growing your brand.</p>
+          <a href={whatsappLink("Hi Aivon Tech, I'm ready to start automating my business. Let's talk!")} target="_blank" rel="noreferrer" className="inline-block mt-7 rounded-full px-7 py-3 font-semibold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black">Start Automating Today →</a>
+        </div>
+      </section>
+    </main>
+  );
+}

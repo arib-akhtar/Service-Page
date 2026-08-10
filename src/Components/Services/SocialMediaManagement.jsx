@@ -326,7 +326,7 @@ const SocialMediaManagement = () => {
       <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-20 text-center scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-500">
         <div className="max-w-3xl mx-auto rounded-3xl p-8 sm:p-12 bg-[#0a0a0c] border border-[#FFD700]/30 backdrop-blur-md shadow-2xl relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(255,215,0,0.05),transparent_50%)] pointer-events-none"></div>
-          <h2 className="text-2xl sm:text-3xl font-bold font-serif bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent">Ready to Dominate Social Media?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold font-serif text-shadow-white ">Ready to Dominate Social Media?</h2>
           <p className="text-gray-300 mt-3 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">Let's build a strategy that grows your audience, boosts engagement, and drives real business results.</p>
           <div className="mt-7">
             <Link to="/hireme" className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black text-sm sm:text-base hover:scale-105 transition-all duration-300 shadow-md">

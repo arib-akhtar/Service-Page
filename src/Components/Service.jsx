@@ -77,7 +77,7 @@ const ServicesSection = () => {
               </a>
 
               {/* Social Media Management */}
-              <a href="#" className="group bg-transparent border border-slate-800 hover:border-[#FFD700]/40 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FFD700]/5 flex flex-col justify-between">
+              <a href="/smm" className="group bg-transparent border border-slate-800 hover:border-[#FFD700]/40 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FFD700]/5 flex flex-col justify-between">
                 <div>
                   <div className="p-3 bg-slate-900/40 rounded-xl w-fit mb-5 group-hover:scale-110 transition-transform duration-300 border border-slate-800 group-hover:border-[#FFD700]/30">
                     <svg className="w-6 h-6 text-[#FFD700]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
@@ -93,7 +93,7 @@ const ServicesSection = () => {
               </a>
 
               {/* Ad Creatives */}
-              <a href="#" className="group bg-transparent border border-slate-800 hover:border-[#FFD700]/40 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FFD700]/5 flex flex-col justify-between">
+              <a href="/ads" className="group bg-transparent border border-slate-800 hover:border-[#FFD700]/40 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FFD700]/5 flex flex-col justify-between">
                 <div>
                   <div className="p-3 bg-slate-900/40 rounded-xl w-fit mb-5 group-hover:scale-110 transition-transform duration-300 border border-slate-800 group-hover:border-[#FFD700]/30">
                     <svg className="w-6 h-6 text-[#FFD700]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -138,7 +138,7 @@ const ServicesSection = () => {
               </a>
 
               {/* Video Editing */}
-              <a href="#" className="group bg-transparent border border-slate-800 hover:border-[#FFD700]/40 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FFD700]/5 flex flex-col justify-between">
+              <a href="/video" className="group bg-transparent border border-slate-800 hover:border-[#FFD700]/40 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FFD700]/5 flex flex-col justify-between">
                 <div>
                   <div className="p-3 bg-slate-900/40 rounded-xl w-fit mb-5 group-hover:scale-110 transition-transform duration-300 border border-slate-800 group-hover:border-[#FFD700]/30">
                     <svg className="w-6 h-6 text-[#FFD700]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
@@ -154,7 +154,7 @@ const ServicesSection = () => {
               </a>
 
               {/* Content Management */}
-              <a href="#" className="group bg-transparent border border-slate-800 hover:border-[#FFD700]/40 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FFD700]/5 flex flex-col justify-between">
+              <a href="/content" className="group bg-transparent border border-slate-800 hover:border-[#FFD700]/40 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FFD700]/5 flex flex-col justify-between">
                 <div>
                   <div className="p-3 bg-slate-900/40 rounded-xl w-fit mb-5 group-hover:scale-110 transition-transform duration-300 border border-slate-800 group-hover:border-[#FFD700]/30">
                     <svg className="w-6 h-6 text-[#FFD700]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
@@ -199,7 +199,7 @@ const ServicesSection = () => {
               </a>
 
               {/* AI Tools & Automation */}
-              <a href="#" className="group bg-transparent border border-slate-800 hover:border-[#FFD700]/40 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FFD700]/5 flex flex-col justify-between">
+              <a href="/ai" className="group bg-transparent border border-slate-800 hover:border-[#FFD700]/40 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FFD700]/5 flex flex-col justify-between">
                 <div>
                   <div className="p-3 bg-slate-900/40 rounded-xl w-fit mb-5 group-hover:scale-110 transition-transform duration-300 border border-slate-800 group-hover:border-[#FFD700]/30">
                     <svg className="w-6 h-6 text-[#FFD700]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 5h10a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2z"></path></svg>
