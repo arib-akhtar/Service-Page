@@ -54,7 +54,7 @@ const Hero = () => {
                 Aivon Tech
               </span>
             </h1>
-            <p className="text-xs sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-150">
+            <p className="text-xs sm:text-lg md:text-xl text-[#ffff] mb-6 sm:mb-8 max-w-3xl mx-auto scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-150">
               Crafting High-Performance Websites & Intelligent AI Solutions Under One Unified Vision, Built to Scale Your Operations, Enhance User Experience, and Drive Unmatched Digital Growth.
             </p>
             
@@ -106,19 +106,19 @@ const Hero = () => {
             <div className="max-w-6xl mx-auto grid grid-cols-4 gap-4 sm:gap-8 text-center min-w-[300px]">
               <div className="hover:scale-105 transition-transform duration-300">
                 <h3 className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">300+</h3>
-                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-gray-400">Clients Served</p>
+                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">Clients Served</p>
               </div>
               <div className="hover:scale-105 transition-transform duration-300">
                 <h3 className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">8</h3>
-                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-gray-400">Specialized Services</p>
+                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">Specialized Services</p>
               </div>
               <div className="hover:scale-105 transition-transform duration-300">
                 <h3 className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">2400+</h3>
-                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-gray-400">5-Star Reviews</p>
+                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">5-Star Reviews</p>
               </div>
               <div className="hover:scale-105 transition-transform duration-300">
                 <h3 className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">MSME</h3>
-                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-gray-400">Certified Business</p>
+                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">Certified Business</p>
               </div>
             </div>
           </section>

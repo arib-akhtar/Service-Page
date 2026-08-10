@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 // import ThemeToggler from './Components/Light'
@@ -28,19 +28,44 @@ import AIAutomation from './Components/Services/AIAutomation'
 // ChatWidget Component
 import ChatWidget from './ChatWidget' 
 
+// Helper component to handle hash scrolling from inner pages
+function ScrollToHashElement() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.replace('#', ''));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToHashElement />
       <Navbar />
       <Routes>
         {/* Main Homepage route */}
         <Route path="/" element={
           <>
-            <Hero />
-            <WhyChooseUs />
+            <div id="hero">
+              <Hero />
+            </div>
+            <div id="whychooseus">
+              <WhyChooseUs />
+            </div>
             <ServicesSection />
             <LuxuryOrbBackground />
-            <About />
+            <div id="about">
+              <About />
+            </div>
             {/* <ThemeToggler /> */}
             <HowToGetStarted />
             <StatsSection />
@@ -61,7 +86,7 @@ function App() {
         {/* Extra Pages Routes */}
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
-        <Route path="/hireme" element={<Hireme />} />
+        <Route path="/contact" element={<Hireme />} />
       </Routes>
       
       <Footer />

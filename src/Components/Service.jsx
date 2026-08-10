@@ -54,7 +54,7 @@ const ServicesSection = () => {
             <div className="flex items-center space-x-3 mb-8">
               <span className="flex h-2 w-2 rounded-full bg-[#FFD700] animate-pulse" />
               <h3 className="text-xs md:text-sm font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border border-[#FFD700]/30 bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine bg-[#FFD700]/5">
-                Stream A: Growth & Ads
+                <imp className="text-[#ffff]">Stream A:</imp> Growth & Ads
               </h3>
             </div>
 
@@ -116,7 +116,7 @@ const ServicesSection = () => {
             <div className="flex items-center space-x-3 mb-8">
               <span className="flex h-2 w-2 rounded-full bg-[#FFD700] animate-pulse" />
               <h3 className="text-xs md:text-sm font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border border-[#FFD700]/30 bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine bg-[#FFD700]/5">
-                Stream B: Creative & Content
+                <imp className="text-[#ffff]">Stream B:</imp> Creative & Content
               </h3>
             </div>
 
@@ -177,7 +177,7 @@ const ServicesSection = () => {
             <div className="flex items-center space-x-3 mb-8">
               <span className="flex h-2 w-2 rounded-full bg-[#FFD700] animate-pulse" />
               <h3 className="text-xs md:text-sm font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border border-[#FFD700]/30 bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine bg-[#FFD700]/5">
-                Stream C: Tech & Automation
+                <imp className="text-[#ffff]">Stream C:</imp> Tech & Automation
               </h3>
             </div>
 

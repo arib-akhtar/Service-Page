@@ -169,7 +169,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="hover:text-white transition-colors flex items-center gap-1.5 group"
                 >
                   <span className="w-1 h-1 bg-slate-700 rounded-full group-hover:bg-[#D4AF37] transition-all" />
@@ -314,7 +314,7 @@ export default function Footer() {
               Privacy
             </a>
             <span>•</span>
-            <a href="#contact" className="hover:text-[#FFD700] transition-all">
+            <a href="/contact" className="hover:text-[#FFD700] transition-all">
               Contact
             </a>
           </div>

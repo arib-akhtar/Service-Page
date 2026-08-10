@@ -32,7 +32,7 @@ const HowToGetStarted = () => {
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-4">
             How to Get Started
           </h2>
-          <p className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto font-medium">
+          <p className="text-xl md:text-2xl text-[#ffff] max-w-2xl mx-auto font-medium">
             Three simple steps. No friction. From zero to launch in record time.
           </p>
           {/* Custom Shiny Gradient Divider */}
@@ -47,7 +47,7 @@ const HowToGetStarted = () => {
             {/* Left Timeline Indicator Column */}
             <div className="flex flex-col items-center flex-shrink-0 mr-6 sm:mr-8">
               {/* Timeline Number Circle */}
-              <div className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-[#FFD700]/60 bg-slate-950 font-black text-xl bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine shadow-lg">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-[#FFD700]/60 bg-slate-950 font-black text-xl bg-gradient-to-r from-[#ffff] via-[#ffff] to-[#ffff] bg-clip-text text-transparent animate-shine shadow-lg">
                 1
               </div>
               {/* Vertical Connector Line - Top to Next Step */}
@@ -59,7 +59,7 @@ const HowToGetStarted = () => {
               <h3 className="text-2xl font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-3 inline-block">
                 Discovery Call
               </h3>
-              <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">
+              <p className="text-[#ffff] text-base md:text-lg leading-relaxed max-w-2xl">
                 Fill out our quick Google Form with your business details, goals, and requirements. We analyze your needs and craft a tailored strategy — no generic templates, only custom solutions built for you.
               </p>
             </div>
@@ -70,7 +70,7 @@ const HowToGetStarted = () => {
             {/* Left Timeline Indicator Column */}
             <div className="flex flex-col items-center flex-shrink-0 mr-6 sm:mr-8">
               {/* Timeline Number Circle */}
-              <div className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-[#FFD700]/60 bg-slate-950 font-black text-xl bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine shadow-lg">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-[#FFD700]/60 bg-slate-950 font-black text-xl bg-gradient-to-r from-[#ffff] via-[#ffff] to-[#ffff] bg-clip-text text-transparent animate-shine shadow-lg">
                 2
               </div>
               {/* Vertical Connector Line */}
@@ -82,7 +82,7 @@ const HowToGetStarted = () => {
               <h3 className="text-2xl font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-3 inline-block">
                 Asset Handover
               </h3>
-              <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">
+              <p className="text-[#ffff] text-base md:text-lg leading-relaxed max-w-2xl">
                 Share your brand assets, logos, fonts, and content via our organized Google Sheet tracker. Everything stays structured, version-controlled, and accessible to both teams at all times.
               </p>
             </div>
@@ -93,7 +93,7 @@ const HowToGetStarted = () => {
             {/* Left Timeline Indicator Column */}
             <div className="flex flex-col items-center flex-shrink-0 mr-6 sm:mr-8">
               {/* Timeline Number Circle */}
-              <div className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-[#FFD700]/60 bg-slate-950 font-black text-xl bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine shadow-lg">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-[#FFD700]/60 bg-slate-950 font-black text-xl bg-gradient-to-r from-[#ffff] via-[#ffff] to-[#ffff] bg-clip-text text-transparent animate-shine shadow-lg">
                 3
               </div>
               {/* No line after the last item */}
@@ -104,7 +104,7 @@ const HowToGetStarted = () => {
               <h3 className="text-2xl font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-3 inline-block">
                 Launch & Grow
               </h3>
-              <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">
+              <p className="text-[#ffff] text-base md:text-lg leading-relaxed max-w-2xl">
                 We go live. All project updates, revisions, and deliverables flow through your dedicated WhatsApp channel. Real-time communication. Transparent progress. Measurable results from day one.
               </p>
             </div>

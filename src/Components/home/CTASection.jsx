@@ -26,8 +26,8 @@ const CTASection = () => {
     <section ref={sectionRef} id="cta" className="bg-transparent text-white py-16 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-5xl mx-auto">
         
-        {/* Main CTA Large Card Container */}
-        <div className="relative overflow-hidden bg-[#0b0f19] border border-slate-800/80 rounded-[2.5rem] p-10 md:p-16 text-center shadow-2xl transition-all duration-300 ease-out hover:border-[#FFD700]/30 hover:shadow-[0_0_50px_rgba(255,215,0,0.05)] scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+        {/* Main CTA Large Card Container - Updated background to transparent */}
+        <div className="relative overflow-hidden bg-transparent border border-slate-800/80 rounded-[2.5rem] p-10 md:p-16 text-center shadow-2xl transition-all duration-300 ease-out hover:border-[#FFD700]/30 hover:shadow-[0_0_50px_rgba(255,215,0,0.05)] scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
           
           {/* Decorative subtle background gradient radial blast */}
           <div className="absolute -inset-10 bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.02)_0%,transparent_70%)] pointer-events-none" />
@@ -36,11 +36,11 @@ const CTASection = () => {
             
             {/* Heading with Signature Shiny Gold Gradient */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-6 leading-tight">
-              Ready to Transform Your <br /> Digital Presence?
+             <imp className="text-[#ffff]">Ready to Transform Your </imp> <br /> Digital Presence?
             </h2>
 
             {/* Subtext description */}
-            <p className="text-base sm:text-lg text-slate-400 font-medium mb-10 max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg text-[#ffff] font-medium mb-10 max-w-2xl leading-relaxed">
               Let's build something extraordinary together. Drop us a message — we reply within 15 minutes.
             </p>
 

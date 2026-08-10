@@ -28,10 +28,10 @@ const TrustBadge = () => {
         
         {/* Section Title Header */}
         <div className="text-center mb-16 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-1 pb-2">
             Trusted by 300+ Businesses
           </h2>
-          <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto font-medium">
+          <p className="text-base sm:text-lg text-[#ffff] max-w-2xl mx-auto font-medium">
             Numbers don't lie. Here's the impact we've delivered across India and beyond.
           </p>
         </div>
@@ -39,8 +39,8 @@ const TrustBadge = () => {
         {/* 4-Column Balanced Grid Layout with Hover Animations */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-8">
           
-          {/* Card 1: Clients Served */}
-          <div className="bg-[#0b0f19] border border-slate-800/80 p-8 rounded-2xl flex flex-col items-center text-center shadow-xl transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#FFD700]/40 hover:shadow-[0_0_30px_rgba(255,215,0,0.08)] cursor-pointer scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-100">
+          {/* Card 1: Clients Served - Background set to transparent */}
+          <div className="bg-transparent border border-slate-800/80 p-8 rounded-2xl flex flex-col items-center text-center shadow-xl transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#FFD700]/40 hover:shadow-[0_0_30px_rgba(255,215,0,0.08)] cursor-pointer scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-100">
             <div className="text-[#a855f7] mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
                 <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -49,13 +49,13 @@ const TrustBadge = () => {
             <h3 className="text-3xl sm:text-4xl font-extrabold bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-2">
               300+
             </h3>
-            <p className="text-xs sm:text-sm uppercase tracking-wider text-slate-400 font-medium">
+            <p className="text-xs sm:text-sm uppercase tracking-wider text-[#ffff] font-medium">
               Clients Served
             </p>
           </div>
 
-          {/* Card 2: 5-Star Reviews */}
-          <div className="bg-[#0b0f19] border border-slate-800/80 p-8 rounded-2xl flex flex-col items-center text-center shadow-xl transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#FFD700]/40 hover:shadow-[0_0_30px_rgba(255,215,0,0.08)] cursor-pointer scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-200">
+          {/* Card 2: 5-Star Reviews - Background set to transparent */}
+          <div className="bg-transparent border border-slate-800/80 p-8 rounded-2xl flex flex-col items-center text-center shadow-xl transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#FFD700]/40 hover:shadow-[0_0_30px_rgba(255,215,0,0.08)] cursor-pointer scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-200">
             <div className="text-[#eab308] mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -64,13 +64,13 @@ const TrustBadge = () => {
             <h3 className="text-3xl sm:text-4xl font-extrabold bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-2">
               2400+
             </h3>
-            <p className="text-xs sm:text-sm uppercase tracking-wider text-slate-400 font-medium">
+            <p className="text-xs sm:text-sm uppercase tracking-wider text-[#ffff] font-medium">
               5-Star Reviews
             </p>
           </div>
 
-          {/* Card 3: Uptime Guarantee */}
-          <div className="bg-[#0b0f19] border border-slate-800/80 p-8 rounded-2xl flex flex-col items-center text-center shadow-xl transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#FFD700]/40 hover:shadow-[0_0_30px_rgba(255,215,0,0.08)] cursor-pointer scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-300">
+          {/* Card 3: Uptime Guarantee - Background set to transparent */}
+          <div className="bg-transparent border border-slate-800/80 p-8 rounded-2xl flex flex-col items-center text-center shadow-xl transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#FFD700]/40 hover:shadow-[0_0_30px_rgba(255,215,0,0.08)] cursor-pointer scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-300">
             <div className="text-[#f97316] mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
@@ -79,13 +79,13 @@ const TrustBadge = () => {
             <h3 className="text-3xl sm:text-4xl font-extrabold bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-2">
               99.9%
             </h3>
-            <p className="text-xs sm:text-sm uppercase tracking-wider text-slate-400 font-medium">
+            <p className="text-xs sm:text-sm uppercase tracking-wider text-[#ffff] font-medium">
               Uptime Guarantee
             </p>
           </div>
 
-          {/* Card 4: Support Available */}
-          <div className="bg-[#0b0f19] border border-slate-800/80 p-8 rounded-2xl flex flex-col items-center text-center shadow-xl transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#FFD700]/40 hover:shadow-[0_0_30px_rgba(255,215,0,0.08)] cursor-pointer scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-400">
+          {/* Card 4: Support Available - Background set to transparent */}
+          <div className="bg-transparent border border-slate-800/80 p-8 rounded-2xl flex flex-col items-center text-center shadow-xl transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#FFD700]/40 hover:shadow-[0_0_30px_rgba(255,215,0,0.08)] cursor-pointer scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-400">
             <div className="text-[#3b82f6] mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -94,18 +94,17 @@ const TrustBadge = () => {
             <h3 className="text-3xl sm:text-4xl font-extrabold bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-2">
               24/7
             </h3>
-            <p className="text-xs sm:text-sm uppercase tracking-wider text-slate-400 font-medium">
+            <p className="text-xs sm:text-sm uppercase tracking-wider text-[#ffff] font-medium">
               Support Available
             </p>
           </div>
 
         </div>
 
-        {/* Lower Centered Full-Width MSME Badge Container - Matching Card Animations */}
-        <div className="bg-[#0b0f19] border border-slate-800/80 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-5xl mx-auto transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-[#FFD700]/40 hover:shadow-[0_0_35px_rgba(255,215,0,0.06)] cursor-pointer scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-500">
+        {/* Lower Centered Full-Width MSME Badge Container - Background set to transparent */}
+        <div className="bg-transparent border border-slate-800/80 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-5xl mx-auto transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-[#FFD700]/40 hover:shadow-[0_0_35px_rgba(255,215,0,0.06)] cursor-pointer scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-500">
           
           <div className="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
-            {/* Government Architecture SVG Icon - Custom Gold Stroke */}
             <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-[#FFD700] flex-shrink-0 transition-transform duration-300 hover:scale-110">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
                 <rect x="4" y="10" width="16" height="11" rx="1" />
@@ -116,16 +115,15 @@ const TrustBadge = () => {
               </svg>
             </div>
             <div>
-              <h4 className="text-base sm:text-lg font-bold bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine mb-0.5">
+              <h4 className="text-base sm:text-lg font-bold bg-[length:200%_auto] text-shadow-white mb-0.5">
                 MSME Registered Enterprise
               </h4>
-              <p className="text-xs sm:text-sm text-slate-400 font-medium">
+              <p className="text-xs sm:text-sm text-slate-400 font-medium bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine">
                 Government of India — Ministry of Micro, Small & Medium Enterprises
               </p>
             </div>
           </div>
 
-          {/* Action Link Row - Gold Interactions */}
           <div className="flex flex-wrap gap-4 items-center justify-center text-xs sm:text-sm font-semibold">
             <a 
               href="/udyamcertificate.pdf" 

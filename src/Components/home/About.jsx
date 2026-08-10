@@ -72,7 +72,7 @@ const About = () => {
             <h2 className="text-4xl font-bold mb-8 font-serif bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine">Our Mission</h2>
             {/* Background aur padding-blur remove kar di gayi hai */}
             <div className="p-10 border border-white/20 rounded-3xl hover:border-[#FFD700] transition-all duration-300">
-              <p className="text-2xl italic text-gray-200">
+              <p className="text-2xl italic text-shadow-white">
                 "To be the catalyst for growth for businesses worldwide."
               </p>
             </div>
