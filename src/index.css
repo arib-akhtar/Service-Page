@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Yeh line dark mode enable karti hai */
+@variant dark (&:where(.dark, .dark *));
+html{
+    scroll-behavior: smooth;
+}

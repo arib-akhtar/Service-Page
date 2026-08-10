@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Aivon Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Smooth transition for accordion dropdowns */
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        /* Canvas layer configurations based on your react component */
+        #luxury-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-[#040406] text-white font-sans antialiased relative selection:bg-[#D4AF37]/30">
+
+    <canvas id="luxury-canvas"></canvas>
+
+    <section id="terms" class="py-20 bg-transparent min-h-screen flex items-center relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent mb-2 inline-block">
+                    Terms and Conditions
+                </h1>
+                <p class="text-gray-400 text-sm mt-2">Last Updated: May 2026</p>
+                <div class="w-24 h-0.5 bg-[#D4AF37]/40 mx-auto mt-4"></div>
+            </div>
+
+            <div class="bg-[#111]/70 backdrop-blur-md border border-[#D4AF37]/20 rounded-xl p-5 mb-8 text-sm text-gray-300 leading-relaxed">
+                <span class="text-[#FFD700] font-bold">Important Notice:</span> By engaging services with 
+                <strong> Aivon Tech</strong> (A registered MSME entity, Govt. of India), you agree to be bound by the terms detailed below. Please click on any section to read the full details.
+            </div>
+
+            <div class="space-y-4">
+                
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">1. Introduction</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            Welcome to Aivon Tech ("Company," "we," "our," or "us"). These Terms and Conditions ("Terms") govern your access to and use of the services provided by Aivon Tech, a registered MSME entity operating under the laws of India. By engaging our services, you ("Client," "you," or "your") agree to be bound by these Terms. Aivon Tech operates as a digital marketing, web development, and AI automation agency providing 8 specialized services through a centralized WhatsApp Business communication hub.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">2. Service Overview</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50 whitespace-pre-line">
+                            Aivon Tech provides services organized into three operational streams:
+                            • Stream A (Growth & Ads): Marketing & Growth Systems, Social Media Management, Ad Creatives.
+                            • Stream B (Creative & Content): Graphic Designing, Video Editing, Content Management.
+                            • Stream C (Tech & Automation): Web Development, AI Tools & Automation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">3. Communication Channels</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            Primary Channel: All client communication is routed through our dedicated WhatsApp Business line. Email: Administrative and formal communications via help@aivontech.com and support@aivontech.com. Response Commitment: We aim to respond within 4 business hours during operational hours (Mon–Sat, 9:00 AM – 8:00 PM IST).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">4. Onboarding Process</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            Step 1 — Discovery Form: Clients complete a Google Form capturing initial requirements. Step 2 — Asset Handover: Deliverable tracking via shared Google Sheet for media/credentials. Step 3 — Project Management: Ongoing communication, approvals, and tracking via WhatsApp Business.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">5. Payment Terms</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            Marketing Plans: Fixed plans like Business Starter (₹1,500/10 days) and Business Intermediate (₹5,000/month). Payment Structure: 50% advance payment upon project confirmation, 50% upon final delivery. Late Payment: Invoices unpaid beyond 15 days may result in project suspension.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">6. Intellectual Property</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            Client Ownership: Upon full payment, the Client owns all final deliverables (designs, code, content). Portfolio Rights: Aivon Tech retains the right to showcase completed work in our portfolio unless agreed otherwise. Source Files (PSD, AI, Figma) are provided upon request after full payment.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">7. Confidentiality</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            All data shared via Google Forms, Sheets, WhatsApp, and email is treated as confidential business information. We do not share, sell, or distribute client data to third parties without explicit written consent.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">8. Service Level Agreement (SLA)</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            Response Time: Initial response within 4 business hours via WhatsApp. Revision Rounds: 2 revision rounds are included per deliverable at no additional cost. Website Uptime: Target 99.9% uptime with proactive monitoring.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">9. Cancellation & Refunds</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            Marketing Plans: Cancel anytime. Business Intermediate requires 15 days' notice (no refund for current cycle). On-Demand Projects: Post advance payment, services are non-refundable. Unstarted Work: Full refund within 7 business days if no work has initiated.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">10. Limitation of Liability</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            Aivon Tech shall not be liable for indirect, incidental, or consequential damages, or revenue/data loss resulting from third-party platform outages (Meta, Google, WhatsApp). Our maximum aggregate liability is limited to the total fees paid by the Client.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">11. Governing Law & Jurisdiction</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            These Terms are governed by and construed in accordance with the laws of India. Any disputes arising from or related to these Terms shall be subject to the exclusive jurisdiction of the courts in India.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center p-6 border border-zinc-800 bg-zinc-950/70 backdrop-blur-md rounded-xl text-xs text-gray-500 space-y-2">
+                <p>Aivon Tech — Ministry of MSME, Govt. of India (Udyam Registered)</p>
+                <p>Have questions? Email us at <span class="text-[#D4AF37]">support@aivontech.com</span></p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        // 1. ACCORDION CONTROL
+        function toggleAccordion(button) {
+            const svg = button.querySelector('svg');
+            const content = button.nextElementSibling;
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                item.style.maxHeight = '0px';
+                item.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
+            });
+
+            if (!isOpen) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                svg.classList.add('rotate-180');
+            } else {
+                content.style.maxHeight = '0px';
+                svg.classList.remove('rotate-180');
+            }
+        }
+
+        // 2. LUXURY ORB CANVAS BACKGROUND ENGINE (Transpiled perfectly from your React code)
+        const canvas = document.getElementById('luxury-canvas');
+        const ctx = canvas.getContext('2d');
+        let animationFrameId;
+
+        let logicalWidth = window.innerWidth;
+        let logicalHeight = window.innerHeight;
+
+        const resizeCanvas = () => {
+            logicalWidth = window.innerWidth;
+            logicalHeight = window.innerHeight;
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = logicalWidth * dpr;
+            canvas.height = logicalHeight * dpr;
+            ctx.scale(dpr, dpr);
+        };
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const mouse = { x: null, y: null, targetX: null, targetY: null, radius: 150 };
+
+        window.addEventListener('mousemove', (e) => { mouse.targetX = e.clientX; mouse.targetY = e.clientY; });
+        window.addEventListener('mouseleave', () => { mouse.targetX = null; mouse.targetY = null; });
+        window.addEventListener('touchmove', (e) => { if (e.touches.length > 0) { mouse.targetX = e.touches[0].clientX; mouse.targetY = e.touches[0].clientY; } });
+        window.addEventListener('touchend', () => { mouse.targetX = null; mouse.targetY = null; });
+
+        class LuxuryOrb {
+            constructor() {
+                this.x = Math.random() * logicalWidth;
+                this.y = Math.random() * logicalHeight;
+                this.baseVx = (Math.random() - 0.5) * 0.16;
+                this.baseVy = (Math.random() - 0.5) * 0.16;
+                this.vx = this.baseVx;
+                this.vy = this.baseVy;
+                this.radius = Math.random() * 20 + 8;
+                this.colorType = Math.random() > 0.4 ? 'gold' : 'silver';
+                this.alpha = Math.random() * 0.35 + 0.15;
+                this.offsetX = 0;
+                this.offsetY = 0;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x - this.radius < 0) { this.x = this.radius; this.vx *= -1; }
+                else if (this.x + this.radius > logicalWidth) { this.x = logicalWidth - this.radius; this.vx *= -1; }
+
+                if (this.y - this.radius < 0) { this.y = this.radius; this.vy *= -1; }
+                else if (this.y + this.radius > logicalHeight) { this.y = logicalHeight - this.radius; this.vy *= -1; }
+
+                if (mouse.x !== null) {
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < mouse.radius) {
+                        const force = (mouse.radius - dist) / mouse.radius;
+                        const pushX = (dx / dist) * force * -25;
+                        const pushY = (dy / dist) * force * -25;
+                        this.offsetX += (pushX - this.offsetX) * 0.1;
+                        this.offsetY += (pushY - this.offsetY) * 0.1;
+                    } else {
+                        this.offsetX += (0 - this.offsetX) * 0.05;
+                        this.offsetY += (0 - this.offsetY) * 0.05;
+                    }
+                } else {
+                    this.offsetX += (0 - this.offsetX) * 0.05;
+                    this.offsetY += (0 - this.offsetY) * 0.05;
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                const renderX = this.x + this.offsetX;
+                const renderY = this.y + this.offsetY;
+                const highlightX = renderX - this.radius * 0.3;
+                const highlightY = renderY - this.radius * 0.3;
+                const gradient = ctx.createRadialGradient(highlightX, highlightY, this.radius * 0.05, renderX, renderY, this.radius);
+
+                if (this.colorType === 'gold') {
+                    gradient.addColorStop(0, 'rgba(255, 248, 220, 0.45)');
+                    gradient.addColorStop(0.35, 'rgba(212, 175, 55, 0.16)');
+                    gradient.addColorStop(1, 'rgba(212, 175, 55, 0.01)');
+                    ctx.strokeStyle = 'rgba(212, 175, 55, 0.22)';
+                } else {
+                    gradient.addColorStop(0, 'rgba(255, 255, 255, 0.55)');
+                    gradient.addColorStop(0.4, 'rgba(255, 255, 255, 0.1)');
+                    gradient.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
+                    ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+                }
+
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(renderX, renderY, this.radius, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.lineWidth = 0.8;
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.arc(highlightX, highlightY, 0.8, 0, Math.PI * 2);
+                ctx.fillStyle = '#FFFFFF';
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        const orbs = Array.from({ length: 32 }, () => new LuxuryOrb());
+
+        const animate = () => {
+            ctx.fillStyle = '#040406'; // Smooth velvet background rendering matching your dark initialization
+            ctx.fillRect(0, 0, logicalWidth, logicalHeight);
+
+            if (mouse.targetX !== null) {
+                if (mouse.x === null) { mouse.x = mouse.targetX; mouse.y = mouse.targetY; }
+                else { mouse.x += (mouse.targetX - mouse.x) * 0.08; mouse.y += (mouse.targetY - mouse.y) * 0.08; }
+            } else { mouse.x = null; mouse.y = null; }
+
+            if (mouse.x !== null) {
+                ctx.save();
+                const cursorGlow = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, mouse.radius * 1.1);
+                cursorGlow.addColorStop(0, 'rgba(212, 175, 55, 0.04)');
+                cursorGlow.addColorStop(1, 'rgba(212, 175, 55, 0)');
+                ctx.fillStyle = cursorGlow;
+                ctx.beginPath(); ctx.arc(mouse.x, mouse.y, mouse.radius * 1.1, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+            }
+
+            for (let i = 0; i < orbs.length; i++) {
+                for (let j = i + 1; j < orbs.length; j++) {
+                    const o1 = orbs[i]; const o2 = orbs[j];
+                    const rx1 = o1.x + o1.offsetX; const ry1 = o1.y + o1.offsetY;
+                    const rx2 = o2.x + o2.offsetX; const ry2 = o2.y + o2.offsetY;
+                    const dx = rx1 - rx2; const dy = ry1 - ry2;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 155) {
+                        const alpha = (1 - dist / 155) * 0.12;
+                        ctx.save();
+                        ctx.strokeStyle = `rgba(212, 175, 55, ${alpha})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath(); ctx.moveTo(rx1, ry1); ctx.lineTo(rx2, ry2); ctx.stroke();
+                        ctx.restore();
+                    }
+                }
+            }
+
+            orbs.forEach(orb => { orb.update(); orb.draw(); });
+            animationFrameId = requestAnimationFrame(animate);
+        };
+        animate();
+    </script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Aivon Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Smooth transition for accordion dropdowns */
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        /* Canvas layer configurations based on your luxury orb component */
+        #luxury-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-[#040406] text-white font-sans antialiased relative selection:bg-[#D4AF37]/30">
+
+    <canvas id="luxury-canvas"></canvas>
+
+    <section id="privacy" class="py-20 bg-transparent min-h-screen flex items-center relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent mb-2 inline-block">
+                    Privacy Policy
+                </h1>
+                <p class="text-gray-400 text-sm mt-2">Last Updated: May 2026</p>
+                <div class="w-24 h-0.5 bg-[#D4AF37]/40 mx-auto mt-4"></div>
+            </div>
+
+            <div class="bg-[#111]/70 backdrop-blur-md border border-[#D4AF37]/20 rounded-xl p-5 mb-8 text-sm text-gray-300 leading-relaxed">
+                <span class="text-[#FFD700] font-bold">Privacy Commitment:</span> At 
+                <strong> Aivon Tech</strong>, we secure and value your personal data. Click on any section below to expand and read our data handling rules.
+            </div>
+
+            <div class="space-y-4">
+                
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">1. Introduction</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            Aivon Tech ("Company," "we," "our," or "us") is committed to protecting the privacy and security of your personal information. This Privacy Policy explains how we collect, use, store, and protect information when you use our website, services, and communication channels. Aivon Tech is a registered MSME entity under the Government of India — Ministry of MSME. We operate in compliance with applicable Indian data protection laws and regulations.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">2. Information We Collect</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50 whitespace-pre-line">
+                            We collect the following types of information in the course of providing our services:
+
+                            <strong class="text-gray-200 block mt-2">2.1 Information You Provide Directly</strong>
+                            • <span class="text-gray-300">Discovery Form Data:</span> Business name, contact details, website goals, target audience, service requirements, and current operational bottlenecks — collected via Google Forms.
+                            • <span class="text-gray-300">Asset Handover Files:</span> Logo files, raw media, brand guidelines, credentials, and reference materials — shared via Google Sheets and secure file transfer.
+                            • <span class="text-gray-300">WhatsApp Messages:</span> Text messages, media files, voice notes, and documents shared through our WhatsApp Business line.
+                            • <span class="text-gray-300">Email Communications:</span> Correspondence sent to help@aivontech.com, support@aivontech.com, or other designated email addresses.
+                            • <span class="text-gray-300">Payment Information:</span> Transaction details processed through standard payment methods (UPI, bank transfer). We do not store complete bank account or card details.
+
+                            <strong class="text-gray-200 block mt-3">2.2 Information Collected Automatically</strong>
+                            • <span class="text-gray-300">Website Analytics:</span> Anonymized visitor data including page views, session duration, referral sources, and device information.
+                            • <span class="text-gray-300">Cookies:</span> Essential cookies for website functionality and optional analytics cookies (with your consent).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">3. How We Use Your Information</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50 whitespace-pre-line">
+                            We use collected information for the following purposes:
+                            • <span class="text-gray-200">Service Delivery:</span> To fulfill your service requests, create deliverables, and manage project workflows.
+                            • <span class="text-gray-200">Communication:</span> To respond to inquiries, provide project updates, and send important notifications via WhatsApp and email.
+                            • <span class="text-gray-200">Project Management:</span> To track deliverables, manage revisions, and maintain engagement records via Google Sheets and WhatsApp.
+                            • <span class="text-gray-200">Service Improvement:</span> To analyze aggregated, anonymized data for improving our service quality and processes.
+                            • <span class="text-gray-200">Legal Compliance:</span> To comply with applicable laws, regulations, and legal obligations.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">4. Data Storage & Security</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50 whitespace-pre-line">
+                            We implement appropriate technical and organizational measures to protect your data:
+                            • <span class="text-gray-200">Google Workspace:</span> Discovery forms and asset tracking sheets are hosted on Google Workspace with enterprise-grade security, encryption at rest, and access controls.
+                            • <span class="text-gray-200">WhatsApp Business:</span> All WhatsApp communications are protected by end-to-end encryption provided by the WhatsApp platform.
+                            • <span class="text-gray-200">Web Hosting:</span> Our website is hosted on secure servers with SSL/TLS encryption, regular security patches, and automated backups.
+                            • <span class="text-gray-200">Access Control:</span> Only authorized Aivon Tech team members have access to client data, governed by internal confidentiality agreements.
+                            • <span class="text-gray-200">No Data Sales:</span> We never sell, rent, or trade your personal information to third parties for marketing or any other purpose.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">5. WhatsApp Business Data</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50 whitespace-pre-line">
+                            As our primary communication channel, we want to be transparent about WhatsApp data handling:
+                            • Messages are received and managed through the WhatsApp Business App installed on our dedicated professional business SIM.
+                            • <span class="text-gray-200">Webhook Processing:</span> Incoming WhatsApp messages may be processed through automated webhook systems (e.g., Make.com, Zapier, or custom Node.js integrations) for lead capture, automated responses, and workflow triggers.
+                            • <span class="text-gray-200">Lead Logging:</span> Contact information from WhatsApp inquiries (name, phone number, message content) may be automatically logged to our Google Sheet Lead Tracker for follow-up purposes.
+                            • <span class="text-gray-200">AI-Assisted Responses:</span> We may use AI tools to draft context-aware replies to common inquiries, which are reviewed and approved before sending.
+                            • <span class="text-gray-200">Auto-Messages:</span> Automated greeting and away messages are configured for off-hours inquiries.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">6. Cookies & Analytics</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50 whitespace-pre-line">
+                            • <span class="text-gray-200">Essential Cookies:</span> Required for basic website functionality (e.g., navigation, session management). These cannot be disabled.
+                            • <span class="text-gray-200">Analytics Cookies:</span> Optional cookies used to understand how visitors interact with our website. Data is anonymized and aggregated.
+                            • <span class="text-gray-200">No Invasive Tracking:</span> We do not use cross-site tracking, fingerprinting, or invasive surveillance technologies.
+                            • <span class="text-gray-200">Consent:</span> Analytics cookies are only activated with your explicit consent.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">7. Third-Party Services</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50 whitespace-pre-line">
+                            We use the following third-party services in the course of our operations:
+                            • <span class="text-gray-200">Google Workspace:</span> Google Forms, Google Sheets, Gmail — for data collection, project tracking, and email communication.
+                            • <span class="text-gray-200">WhatsApp / Meta:</span> WhatsApp Business App and WhatsApp Cloud API for client communication and automated workflows.
+                            • <span class="text-gray-200">Web Hosting Provider:</span> For hosting our website and client web projects with SSL certificates and server-level security.
+                            • <span class="text-gray-200">Make.com / Zapier:</span> For workflow automation, webhook processing, and integration between services.
+                            • <span class="text-gray-200">Analytics:</span> Basic website analytics for understanding traffic patterns (anonymized data only).
+
+                            Each third-party service operates under its own privacy policy. We encourage you to review their policies for detailed information on their data practices.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">8. Data Retention</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50 whitespace-pre-line">
+                            • <span class="text-gray-200">Active Engagements:</span> Client data is retained throughout the duration of the service engagement.
+                            • <span class="text-gray-200">Post-Engagement:</span> Data is retained for 12 months after the conclusion of the engagement for reference, warranty support, and potential re-engagement.
+                            • <span class="text-gray-200">Deletion:</span> After the retention period, client data is securely deleted unless required by law to be retained longer.
+                            • <span class="text-gray-200">On-Request Deletion:</span> Data deletion requests are honored within 30 business days (see Section 9).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">9. Your Rights</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50 whitespace-pre-line">
+                            You have the following rights regarding your personal data:
+                            • <span class="text-gray-200">Right to Access:</span> Request a copy of the personal data we hold about you.
+                            • <span class="text-gray-200">Right to Correction:</span> Request correction of inaccurate or incomplete personal data.
+                            • <span class="text-gray-200">Right to Deletion:</span> Request deletion of your personal data, subject to legal retention requirements.
+                            • <span class="text-gray-200">Right to Opt-Out:</span> Opt out of non-essential communications at any time by notifying us via WhatsApp or email.
+                            • <span class="text-gray-200">Right to Data Portability:</span> Request your data in a commonly used, machine-readable format.
+
+                            To exercise any of these rights, please contact us at help@aivontech.com, support@aivontech.com or via our WhatsApp Business line.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">10. Children's Privacy</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50">
+                            Aivon Tech's services are designed for businesses and individuals aged 18 and above. We do not knowingly collect personal information from children under 18. If we become aware that we have inadvertently collected data from a minor, we will take immediate steps to delete such information.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">11. Changes to This Policy</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50 whitespace-pre-line">
+                            Aivon Tech reserves the right to update this Privacy Policy at any time. We will notify active clients of material changes via:
+                            • WhatsApp message to our active communication threads
+                            • Email notification to registered email addresses
+                            • Prominent notice on our website
+
+                            Changes take effect 15 days after notification. Continued use of our services after the effective date constitutes acceptance of the updated policy.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-[#0a0a0a]/80 backdrop-blur-md rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-200 hover:text-white hover:bg-zinc-900/50 transition-colors group">
+                        <span class="text-base md:text-lg">12. Contact Us</span>
+                        <svg class="h-5 w-5 text-[#D4AF37] transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden">
+                        <div class="p-4 text-gray-400 text-sm leading-relaxed border-t border-zinc-900/50 whitespace-pre-line">
+                            For questions, concerns, or requests related to this Privacy Policy or your personal data, please contact us:
+                            • <span class="text-gray-200">Email:</span> help@aivontech.com / support@aivontech.com
+                            • <span class="text-gray-200">WhatsApp:</span> Chat with us over our official Business Line
+                            • <span class="text-gray-200">Registration:</span> MSME Registered, Government of India — Ministry of MSME
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center p-6 border border-zinc-800 bg-zinc-950/70 backdrop-blur-md rounded-xl text-xs text-gray-500 space-y-2">
+                <p>Aivon Tech — Ministry of MSME, Govt. of India (Udyam Registered)</p>
+                <p>Security Hub: <span class="text-[#D4AF37]">support@aivontech.com</span></p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        // 1. ACCORDION CONTROL (Single expanded panel rule)
+        function toggleAccordion(button) {
+            const svg = button.querySelector('svg');
+            const content = button.nextElementSibling;
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                item.style.maxHeight = '0px';
+                item.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
+            });
+
+            if (!isOpen) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                svg.classList.add('rotate-180');
+            } else {
+                content.style.maxHeight = '0px';
+                svg.classList.remove('rotate-180');
+            }
+        }
+
+        // 2. LUXURY ORB CANVAS BACKGROUND ENGINE
+        const canvas = document.getElementById('luxury-canvas');
+        const ctx = canvas.getContext('2d');
+        let animationFrameId;
+
+        let logicalWidth = window.innerWidth;
+        let logicalHeight = window.innerHeight;
+
+        const resizeCanvas = () => {
+            logicalWidth = window.innerWidth;
+            logicalHeight = window.innerHeight;
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = logicalWidth * dpr;
+            canvas.height = logicalHeight * dpr;
+            ctx.scale(dpr, dpr);
+        };
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const mouse = { x: null, y: null, targetX: null, targetY: null, radius: 150 };
+
+        window.addEventListener('mousemove', (e) => { mouse.targetX = e.clientX; mouse.targetY = e.clientY; });
+        window.addEventListener('mouseleave', () => { mouse.targetX = null; mouse.targetY = null; });
+        window.addEventListener('touchmove', (e) => { if (e.touches.length > 0) { mouse.targetX = e.touches[0].clientX; mouse.targetY = e.touches[0].clientY; } });
+        window.addEventListener('touchend', () => { mouse.targetX = null; mouse.targetY = null; });
+
+        class LuxuryOrb {
+            constructor() {
+                this.x = Math.random() * logicalWidth;
+                this.y = Math.random() * logicalHeight;
+                this.baseVx = (Math.random() - 0.5) * 0.16;
+                this.baseVy = (Math.random() - 0.5) * 0.16;
+                this.vx = this.baseVx;
+                this.vy = this.baseVy;
+                this.radius = Math.random() * 20 + 8;
+                this.colorType = Math.random() > 0.4 ? 'gold' : 'silver';
+                this.alpha = Math.random() * 0.35 + 0.15;
+                this.offsetX = 0;
+                this.offsetY = 0;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x - this.radius < 0) { this.x = this.radius; this.vx *= -1; }
+                else if (this.x + this.radius > logicalWidth) { this.x = logicalWidth - this.radius; this.vx *= -1; }
+
+                if (this.y - this.radius < 0) { this.y = this.radius; this.vy *= -1; }
+                else if (this.y + this.radius > logicalHeight) { this.y = logicalHeight - this.radius; this.vy *= -1; }
+
+                if (mouse.x !== null) {
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < mouse.radius) {
+                        const force = (mouse.radius - dist) / mouse.radius;
+                        const pushX = (dx / dist) * force * -25;
+                        const pushY = (dy / dist) * force * -25;
+                        this.offsetX += (pushX - this.offsetX) * 0.1;
+                        this.offsetY += (pushY - this.offsetY) * 0.1;
+                    } else {
+                        this.offsetX += (0 - this.offsetX) * 0.05;
+                        this.offsetY += (0 - this.offsetY) * 0.05;
+                    }
+                } else {
+                    this.offsetX += (0 - this.offsetX) * 0.05;
+                    this.offsetY += (0 - this.offsetY) * 0.05;
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                const renderX = this.x + this.offsetX;
+                const renderY = this.y + this.offsetY;
+                const highlightX = renderX - this.radius * 0.3;
+                const highlightY = renderY - this.radius * 0.3;
+                const gradient = ctx.createRadialGradient(highlightX, highlightY, this.radius * 0.05, renderX, renderY, this.radius);
+
+                if (this.colorType === 'gold') {
+                    gradient.addColorStop(0, 'rgba(255, 248, 220, 0.45)');
+                    gradient.addColorStop(0.35, 'rgba(212, 175, 55, 0.16)');
+                    gradient.addColorStop(1, 'rgba(212, 175, 55, 0.01)');
+                    ctx.strokeStyle = 'rgba(212, 175, 55, 0.22)';
+                } else {
+                    gradient.addColorStop(0, 'rgba(255, 255, 255, 0.55)');
+                    gradient.addColorStop(0.4, 'rgba(255, 255, 255, 0.1)');
+                    gradient.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
+                    ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+                }
+
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(renderX, renderY, this.radius, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.lineWidth = 0.8;
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.arc(highlightX, highlightY, 0.8, 0, Math.PI * 2);
+                ctx.fillStyle = '#FFFFFF';
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        const orbs = Array.from({ length: 32 }, () => new LuxuryOrb());
+
+        const animate = () => {
+            ctx.fillStyle = '#040406'; // Smooth velvet background rendering matching your dark initialization
+            ctx.fillRect(0, 0, logicalWidth, logicalHeight);
+
+            if (mouse.targetX !== null) {
+                if (mouse.x === null) { mouse.x = mouse.targetX; mouse.y = mouse.targetY; }
+                else { mouse.x += (mouse.targetX - mouse.x) * 0.08; mouse.y += (mouse.targetY - mouse.y) * 0.08; }
+            } else { mouse.x = null; mouse.y = null; }
+
+            if (mouse.x !== null) {
+                ctx.save();
+                const cursorGlow = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, mouse.radius * 1.1);
+                cursorGlow.addColorStop(0, 'rgba(212, 175, 55, 0.04)');
+                cursorGlow.addColorStop(1, 'rgba(212, 175, 55, 0)');
+                ctx.fillStyle = cursorGlow;
+                ctx.beginPath(); ctx.arc(mouse.x, mouse.y, mouse.radius * 1.1, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+            }
+
+            for (let i = 0; i < orbs.length; i++) {
+                for (let j = i + 1; j < orbs.length; j++) {
+                    const o1 = orbs[i]; const o2 = orbs[j];
+                    const rx1 = o1.x + o1.offsetX; const ry1 = o1.y + o1.offsetY;
+                    const rx2 = o2.x + o2.offsetX; const ry2 = o2.y + o2.offsetY;
+                    const dx = rx1 - rx2; const dy = ry1 - ry2;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 155) {
+                        const alpha = (1 - dist / 155) * 0.12;
+                        ctx.save();
+                        ctx.strokeStyle = `rgba(212, 175, 55, ${alpha})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath(); ctx.moveTo(rx1, ry1); ctx.lineTo(rx2, ry2); ctx.stroke();
+                        ctx.restore();
+                    }
+                }
+            }
+
+            orbs.forEach(orb => { orb.update(); orb.draw(); });
+            animationFrameId = requestAnimationFrame(animate);
+        };
+        animate();
+    </script>
+</body>
+</html>
