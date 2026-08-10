@@ -9,7 +9,6 @@ export default function LuxuryOrbBackground() {
     const ctx = canvas.getContext('2d');
     let animationFrameId;
 
-    // Track logical screen bounds rather than physical pixels to prevent rendering drift
     let logicalWidth = window.innerWidth;
     let logicalHeight = window.innerHeight;
 
@@ -18,11 +17,8 @@ export default function LuxuryOrbBackground() {
       logicalHeight = window.innerHeight;
       const dpr = window.devicePixelRatio || 1;
       
-      // Scaling backing store size for high-DPI (Retina) crispness
       canvas.width = logicalWidth * dpr;
       canvas.height = logicalHeight * dpr;
-      
-      // Scaling drawing context to match logical CSS coordinates
       ctx.scale(dpr, dpr);
     };
     resizeCanvas();
@@ -33,8 +29,10 @@ export default function LuxuryOrbBackground() {
       y: null, 
       targetX: null, 
       targetY: null, 
-      radius: 150 // Radius of magnetic interaction aura
+      radius: 180 
     };
+
+    const ripples = []; // Click effect waves
 
     const handleMouseMove = (e) => {
       mouse.targetX = e.clientX;
@@ -46,120 +44,126 @@ export default function LuxuryOrbBackground() {
       mouse.targetY = null;
     };
 
+    const handleClick = (e) => {
+      ripples.push({
+        x: e.clientX,
+        y: e.clientY,
+        radius: 10,
+        maxRadius: 200,
+        alpha: 0.8
+      });
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('click', handleClick);
 
-    // Support for touchscreen interactions
-    const handleTouchMove = (e) => {
-      if (e.touches.length > 0) {
-        mouse.targetX = e.touches[0].clientX;
-        mouse.targetY = e.touches[0].clientY;
-      }
-    };
-    window.addEventListener('touchmove', handleTouchMove);
-    window.addEventListener('touchend', handleMouseLeave);
-
+    // 1. Luxury Orbs Class (Size reduced for compact & clean look)
     class LuxuryOrb {
       constructor() {
         this.x = Math.random() * logicalWidth;
         this.y = Math.random() * logicalHeight;
-        this.baseVx = (Math.random() - 0.5) * 0.16; // Super-slow elegant floating movement
-        this.baseVy = (Math.random() - 0.5) * 0.16;
-        this.vx = this.baseVx;
-        this.vy = this.baseVy;
-        this.radius = Math.random() * 20 + 8; // Varied dimensions for 3D depth field
-        this.colorType = Math.random() > 0.4 ? 'gold' : 'silver';
-        this.alpha = Math.random() * 0.35 + 0.15;
-        this.offsetX = 0; // Spatial offset displacement for spring physics
+        
+        this.angle = Math.random() * Math.PI * 2;
+        this.frequency = Math.random() * 0.002 + 0.0008; 
+        this.amplitude = Math.random() * 0.3 + 0.1;    
+        this.vx = (Math.random() - 0.5) * 0.06;          
+        this.vy = (Math.random() - 0.5) * 0.06;
+        
+        // Reduced size: Now compact (4px to 14px radius instead of 8px to 28px)
+        this.radius = Math.random() * 10 + 4;
+        this.baseRadius = this.radius;
+        
+        this.minAlpha = Math.random() * 0.1 + 0.05;
+        this.maxAlpha = Math.random() * 0.3 + 0.4; 
+        this.blinkSpeed = Math.random() * 0.02 + 0.008;  
+        this.blinkTimer = Math.random() * Math.PI * 2;
+
+        this.pulseSpeed = Math.random() * 0.01 + 0.004;
+        this.pulseTimer = Math.random() * Math.PI;
+        
+        this.offsetX = 0;
         this.offsetY = 0;
       }
 
       update() {
-        // Natural continuous movement
-        this.x += this.vx;
-        this.y += this.vy;
+        this.angle += this.frequency;
+        this.x += this.vx + Math.cos(this.angle) * this.amplitude;
+        this.y += this.vy + Math.sin(this.angle) * this.amplitude;
 
-        // Wall collision containment (Verified directly against logical dimensions)
-        if (this.x - this.radius < 0) {
-          this.x = this.radius;
-          this.vx *= -1;
-        } else if (this.x + this.radius > logicalWidth) {
-          this.x = logicalWidth - this.radius;
-          this.vx *= -1;
-        }
+        this.blinkTimer += this.blinkSpeed;
+        this.currentAlpha = this.minAlpha + (Math.sin(this.blinkTimer) + 1) / 2 * (this.maxAlpha - this.minAlpha);
 
-        if (this.y - this.radius < 0) {
-          this.y = this.radius;
-          this.vy *= -1;
-        } else if (this.y + this.radius > logicalHeight) {
-          this.y = logicalHeight - this.radius;
-          this.vy *= -1;
-        }
+        this.pulseTimer += this.pulseSpeed;
+        this.radius = this.baseRadius + Math.sin(this.pulseTimer) * 1;
 
+        if (this.x < -50) this.x = logicalWidth + 50;
+        if (this.x > logicalWidth + 50) this.x = -50;
+        if (this.y < -50) this.y = logicalHeight + 50;
+        if (this.y > logicalHeight + 50) this.y = -50;
+
+        // Interaction with mouse cursor
         if (mouse.x !== null) {
           const dx = mouse.x - this.x;
           const dy = mouse.y - this.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           
           if (dist < mouse.radius) {
-            // Stronger repulsive spring force closer to the cursor center
             const force = (mouse.radius - dist) / mouse.radius;
-            const pushX = (dx / dist) * force * -25; // Negative pushing force
-            const pushY = (dy / dist) * force * -25;
+            const pushX = (dx / dist) * force * 18;
+            const pushY = (dy / dist) * force * 18;
             
-            // Interpolate coordinates smoothly toward offset displacement
-            this.offsetX += (pushX - this.offsetX) * 0.1;
-            this.offsetY += (pushY - this.offsetY) * 0.1;
+            this.offsetX += (-pushX - this.offsetX) * 0.08;
+            this.offsetY += (-pushY - this.offsetY) * 0.08;
           } else {
-            // Decelerating spring return to original trajectory
-            this.offsetX += (0 - this.offsetX) * 0.05;
-            this.offsetY += (0 - this.offsetY) * 0.05;
+            this.offsetX += (0 - this.offsetX) * 0.04;
+            this.offsetY += (0 - this.offsetY) * 0.04;
           }
         } else {
-          // Absolute zero restoration when mouse leaves window bounds
-          this.offsetX += (0 - this.offsetX) * 0.05;
-          this.offsetY += (0 - this.offsetY) * 0.05;
+          this.offsetX += (0 - this.offsetX) * 0.04;
+          this.offsetY += (0 - this.offsetY) * 0.04;
         }
+
+        // Interaction with click ripples
+        ripples.forEach(ripple => {
+          const dx = ripple.x - (this.x + this.offsetX);
+          const dy = ripple.y - (this.y + this.offsetY);
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (Math.abs(dist - ripple.radius) < 30) {
+            this.offsetX += (dx / dist) * 10;
+            this.offsetY += (dy / dist) * 10;
+          }
+        });
       }
 
       draw() {
         ctx.save();
-        ctx.globalAlpha = this.alpha;
+        ctx.globalAlpha = this.currentAlpha; 
 
         const renderX = this.x + this.offsetX;
         const renderY = this.y + this.offsetY;
 
-        // Specular shining glare calculations inside 3D spheres
-        const highlightX = renderX - this.radius * 0.3;
-        const highlightY = renderY - this.radius * 0.3;
+        const highlightX = renderX - this.radius * 0.35;
+        const highlightY = renderY - this.radius * 0.35;
         
         const gradient = ctx.createRadialGradient(
           highlightX, highlightY, this.radius * 0.05,
           renderX, renderY, this.radius
         );
 
-        if (this.colorType === 'gold') {
-          gradient.addColorStop(0, 'rgba(255, 248, 220, 0.45)'); // Inner core reflection
-          gradient.addColorStop(0.35, 'rgba(212, 175, 55, 0.16)');
-          gradient.addColorStop(1, 'rgba(212, 175, 55, 0.01)');
-          ctx.strokeStyle = 'rgba(212, 175, 55, 0.22)';
-        } else {
-          gradient.addColorStop(0, 'rgba(255, 255, 255, 0.55)'); // Metallic chrome gloss reflection
-          gradient.addColorStop(0.4, 'rgba(255, 255, 255, 0.1)');
-          gradient.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
-          ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
-        }
-
+        gradient.addColorStop(0, 'rgba(255, 250, 205, 0.95)'); 
+        gradient.addColorStop(0.4, 'rgba(255, 215, 0, 0.55)'); 
+        gradient.addColorStop(1, 'rgba(212, 175, 55, 0.02)');
+        
         ctx.fillStyle = gradient;
+        ctx.strokeStyle = 'rgba(255, 215, 0, 0.6)';
+        ctx.lineWidth = 0.8;
+
         ctx.beginPath();
         ctx.arc(renderX, renderY, this.radius, 0, Math.PI * 2);
         ctx.fill();
-
-        // High-end delicate stroke border
-        ctx.lineWidth = 0.8;
         ctx.stroke();
 
-        // Core bright pinhole highlight
         ctx.beginPath();
         ctx.arc(highlightX, highlightY, 0.8, 0, Math.PI * 2);
         ctx.fillStyle = '#FFFFFF';
@@ -169,15 +173,47 @@ export default function LuxuryOrbBackground() {
       }
     }
 
-    const orbs = Array.from({ length: 32 }, () => new LuxuryOrb());
+    // 2. Floating Golden Dust (Stardust) Class
+    class Stardust {
+      constructor() {
+        this.x = Math.random() * logicalWidth;
+        this.y = Math.random() * logicalHeight;
+        this.size = Math.random() * 1.5 + 0.3;
+        this.vx = (Math.random() - 0.5) * 0.1;
+        this.vy = (Math.random() - 0.5) * 0.1;
+        this.alpha = Math.random() * 0.7 + 0.1;
+        this.fadeSpeed = Math.random() * 0.02 + 0.005;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.alpha += Math.sin(Date.now() * 0.002) * 0.01;
+
+        if (this.x < 0) this.x = logicalWidth;
+        if (this.x > logicalWidth) this.x = 0;
+        if (this.y < 0) this.y = logicalHeight;
+        if (this.y > logicalHeight) this.y = 0;
+      }
+
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = Math.max(0.1, Math.min(1, this.alpha));
+        ctx.fillStyle = '#FFFACD';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    const orbs = Array.from({ length: 35 }, () => new LuxuryOrb());
+    const dusts = Array.from({ length: 50 }, () => new Stardust());
 
     const animate = () => {
-      // Dynamic color selection matching standard light and dark html theme class
-      const isDark = document.documentElement.classList.contains('dark');
-      ctx.fillStyle = '#040406'; // Velvet dark mode locked background
+      ctx.fillStyle = '#060609';
       ctx.fillRect(0, 0, logicalWidth, logicalHeight);
 
-      // Smooth lag-free mouse coordinate interpolation (easing lag filter)
       if (mouse.targetX !== null) {
         if (mouse.x === null) {
           mouse.x = mouse.targetX;
@@ -191,23 +227,47 @@ export default function LuxuryOrbBackground() {
         mouse.y = null;
       }
 
-      // Drawing the interactive golden gravity aura glow underneath orbs
+      // Cursor Glow
       if (mouse.x !== null) {
         ctx.save();
         const cursorGlow = ctx.createRadialGradient(
           mouse.x, mouse.y, 0,
-          mouse.x, mouse.y, mouse.radius * 1.1
+          mouse.x, mouse.y, mouse.radius * 1.4
         );
-        cursorGlow.addColorStop(0, 'rgba(212, 175, 55, 0.04)');
-        cursorGlow.addColorStop(1, 'rgba(212, 175, 55, 0)');
+        cursorGlow.addColorStop(0, 'rgba(255, 215, 0, 0.2)');
+        cursorGlow.addColorStop(0.7, 'rgba(255, 215, 0, 0.04)');
+        cursorGlow.addColorStop(1, 'rgba(255, 215, 0, 0)');
         ctx.fillStyle = cursorGlow;
         ctx.beginPath();
-        ctx.arc(mouse.x, mouse.y, mouse.radius * 1.1, 0, Math.PI * 2);
+        ctx.arc(mouse.x, mouse.y, mouse.radius * 1.4, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore();
       }
 
-      // Rendering connection structural threads between neighboring nodes
+      // Render Click Ripples
+      ripples.forEach((ripple, index) => {
+        ripple.radius += 3;
+        ripple.alpha -= 0.02;
+        if (ripple.alpha <= 0 || ripple.radius >= ripple.maxRadius) {
+          ripples.splice(index, 1);
+          return;
+        }
+        ctx.save();
+        ctx.strokeStyle = `rgba(255, 215, 0, ${ripple.alpha})`;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
+      });
+
+      // Render Stardust
+      dusts.forEach(dust => {
+        dust.update();
+        dust.draw();
+      });
+
+      // Universal Connection Lines (350px range)
       for (let i = 0; i < orbs.length; i++) {
         for (let j = i + 1; j < orbs.length; j++) {
           const o1 = orbs[i];
@@ -222,10 +282,10 @@ export default function LuxuryOrbBackground() {
           const dy = ry1 - ry2;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 155) {
-            const alpha = (1 - dist / 155) * 0.12;
+          if (dist < 350) {
+            const alpha = (1 - dist / 350) * 0.22 * ((o1.currentAlpha + o2.currentAlpha) / 2);
             ctx.save();
-            ctx.strokeStyle = `rgba(212, 175, 55, ${alpha})`;
+            ctx.strokeStyle = `rgba(255, 215, 0, ${alpha})`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(rx1, ry1);
@@ -236,7 +296,7 @@ export default function LuxuryOrbBackground() {
         }
       }
 
-      // Physics loop execution on every individual orb
+      // Render Orbs
       orbs.forEach(orb => {
         orb.update();
         orb.draw();
@@ -252,8 +312,7 @@ export default function LuxuryOrbBackground() {
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseleave', handleMouseLeave);
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchend', handleMouseLeave);
+      window.removeEventListener('click', handleClick);
     };
   }, []);
 
