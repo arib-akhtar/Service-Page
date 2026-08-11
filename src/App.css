@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
+  overflow-x: hidden;
 }
