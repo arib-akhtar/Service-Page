@@ -18,13 +18,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-black backdrop-blur-md border-b border-[#FFD700]/30 shadow-sm z-50 transition-all duration-300 pb-3">
+    <nav className="fixed top-0 left-0 w-full bg-black backdrop-blur-md border-b border-[#FFD700]/30 shadow-sm z-50 transition-all duration-300 pb-1 lg:pb-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-xl sm:text-2xl font-bold flex items-center">
-              <img src="/aivontech.png" alt="My Image" className="h-12 sm:h-14 lg:h-22 w-auto object-contain mt-1" /> 
+              <img src="/aivontech.png" alt="My Image" className="h-12 sm:h-14 lg:h-20.5 w-auto object-contain mt-1" /> 
               <span className="bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine font-serif mt-1 sm:mt-2 lg:mt-3 text-xl sm:text-xl lg:text-[28px] font-bold">
                 Aivon Tech
               </span>

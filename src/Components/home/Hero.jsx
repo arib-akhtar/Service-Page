@@ -24,7 +24,7 @@ const Hero = () => {
 
   return (
     <div ref={heroRef}>
-      <section id='home' className="relative w-full min-h-[92vh] lg:min-h-screen flex items-center justify-center text-white overflow-hidden pt-16 pb-12 sm:pt-28 sm:pb-16 md:pt-36">
+      <section id='home' className="relative w-full min-h-[90vh] lg:min-h-screen flex items-center justify-center text-white overflow-hidden pt-20 pb-12 sm:pt-28 sm:pb-16 md:pt-36">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "" }}
@@ -40,7 +40,7 @@ const Hero = () => {
                 href="/udyamcertificate.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[10px] sm:text-xs font-medium text-[#FFD700] tracking-wider uppercase shadow-[0_0_15px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37]/20 transition-all hover:scale-105"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[10px] sm:text-xs font-medium text-[#FFD700] tracking-wider uppercase shadow-[0_0_15px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37]/20 transition-all hover:scale-105 text-center flex-wrap justify-center"
               >
                 <span>🚀</span>
                 <span>INDIA'S MSME-CERTIFIED DIGITAL PARTNER</span>
@@ -48,22 +48,22 @@ const Hero = () => {
               </a>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
               Welcome to the <br className="hidden sm:inline" />
-              <span className="text-blue-500 block sm:inline text-4xl sm:text-6xl md:text-8xl font-bold bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine font-serif">
+              <span className="text-blue-500 block sm:inline text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine font-serif">
                 Aivon Tech
               </span>
             </h1>
-            <p className="text-xs sm:text-lg md:text-xl text-[#ffff] mb-6 sm:mb-8 max-w-3xl mx-auto scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-150">
+            <p className="text-xs sm:text-base md:text-lg lg:text-xl text-[#ffff] mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-150">
               Crafting High-Performance Websites & Intelligent AI Solutions Under One Unified Vision, Built to Scale Your Operations, Enhance User Experience, and Drive Unmatched Digital Growth.
             </p>
             
             {/* Action buttons styled with fixed fitting width bounds to look clean and compact */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-xs sm:max-w-none mx-auto mb-8 sm:mb-12 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-300">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full max-w-xs sm:max-w-none mx-auto mb-8 sm:mb-12 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-300">
               
               <a 
                 href="#services" 
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-black font-bold bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#d1cb92] to-[#FFD700] bg-clip-transparent animate-shine hover:bg-[#D4AF37]/30 hover:text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-black font-bold bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#d1cb92] to-[#FFD700] bg-clip-transparent animate-shine hover:bg-[#D4AF37]/30 hover:text-white px-6 sm:px-8 py-3 rounded-lg text-sm sm:text-base font-semibold transition-all hover:scale-105"
               >
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
@@ -85,7 +85,7 @@ const Hero = () => {
                 href="https://wa.me/918789963987?text=Hi%20Aivon%20Tech,%20I%20want%20to%20transform%20my%20digital%20presence!" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-black font-bold bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#d1cb92] to-[#FFD700] bg-clip-transparent animate-shine hover:bg-[#D4AF37]/30 hover:text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-black font-bold bg-[length:200%_auto] bg-gradient-to-r from-[#FFD700] via-[#d1cb92] to-[#FFD700] bg-clip-transparent animate-shine hover:bg-[#D4AF37]/30 hover:text-white px-6 sm:px-8 py-3 rounded-lg text-sm sm:text-base font-semibold transition-all hover:scale-105"
               >
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
@@ -102,23 +102,23 @@ const Hero = () => {
           </div>
           
           {/* Stats Bar */}
-          <section className="pt-4 pb-2 bg-transparent text-white w-full scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-500 overflow-x-auto sm:overflow-visible no-scrollbar">
-            <div className="max-w-6xl mx-auto grid grid-cols-4 gap-4 sm:gap-8 text-center min-w-[300px]">
-              <div className="hover:scale-105 transition-transform duration-300">
-                <h3 className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">300+</h3>
-                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">Clients Served</p>
+          <section className="pt-4 pb-2 bg-transparent text-white w-full scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-500">
+            <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center">
+              <div className="hover:scale-105 transition-transform duration-300 p-2">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">300+</h3>
+                <p className="text-[10px] sm:text-xs md:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">Clients Served</p>
               </div>
-              <div className="hover:scale-105 transition-transform duration-300">
-                <h3 className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">8</h3>
-                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">Specialized Services</p>
+              <div className="hover:scale-105 transition-transform duration-300 p-2">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">8</h3>
+                <p className="text-[10px] sm:text-xs md:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">Specialized Services</p>
               </div>
-              <div className="hover:scale-105 transition-transform duration-300">
-                <h3 className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">2400+</h3>
-                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">5-Star Reviews</p>
+              <div className="hover:scale-105 transition-transform duration-300 p-2">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">2400+</h3>
+                <p className="text-[10px] sm:text-xs md:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">5-Star Reviews</p>
               </div>
-              <div className="hover:scale-105 transition-transform duration-300">
-                <h3 className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">MSME</h3>
-                <p className="text-[9px] sm:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">Certified Business</p>
+              <div className="hover:scale-105 transition-transform duration-300 p-2">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#FFD700] to-[#FFFACD] bg-clip-text text-transparent">MSME</h3>
+                <p className="text-[10px] sm:text-xs md:text-sm mt-1 sm:mt-2 uppercase tracking-wide text-[#ffff]">Certified Business</p>
               </div>
             </div>
           </section>

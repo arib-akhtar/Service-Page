@@ -134,34 +134,34 @@ export default function ContentManagement() {
       <LuxuryOrbBackground />
 
       {/* HERO SECTION */}
-      <section className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+      <section className="relative z-10 pt-24 sm:pt-32 pb-14 sm:pb-20 px-4 sm:px-6 lg:px-8 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-[#FFD700] font-semibold tracking-[0.2em] text-sm mb-4">STREAM B: CREATIVE & CONTENT</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent pb-2">
+          <p className="text-[#FFD700] font-semibold tracking-[0.2em] text-xs sm:text-sm mb-3 sm:mb-4">STREAM B: CREATIVE & CONTENT</p>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent pb-2 sm:pb-3">
             Content Management
           </h1>
-          <p className="max-w-2xl mx-auto mt-6 text-gray-300 text-lg leading-relaxed">
+          <p className="max-w-2xl mx-auto mt-4 sm:mt-6 text-gray-300 text-base sm:text-lg leading-relaxed">
             Get custom blogs, posts, and scripts. We plan, write, and share your content. Build a brand that gets traffic and leads.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-9">
-            <a href="#pricing" className="rounded-full px-7 py-3 font-semibold text-black bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] hover:scale-105 transition-transform">Get a Quote</a>
-            <a href={whatsappLink("Hi Aivon Tech, I'm interested in your Content Management services.")} target="_blank" rel="noreferrer" className="rounded-full px-7 py-3 font-semibold border border-[#D4AF37]/60 text-[#FFFACD] bg-black/30 backdrop-blur hover:bg-[#D4AF37]/10 transition-colors">💬 Chat on WhatsApp</a>
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-7 sm:mt-9">
+            <a href="#pricing" className="w-full sm:w-auto text-center rounded-full px-7 py-3 font-semibold text-black bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] hover:scale-105 active:scale-95 transition-transform shadow-lg">Get a Quote</a>
+            <a href={whatsappLink("Hi Aivon Tech, I'm interested in your Content Management services.")} target="_blank" rel="noreferrer" className="w-full sm:w-auto text-center rounded-full px-7 py-3 font-semibold border border-[#D4AF37]/60 text-[#FFFACD] bg-black/30 backdrop-blur hover:bg-[#D4AF37]/10 active:scale-95 transition-colors">💬 Chat on WhatsApp</a>
           </div>
         </div>
       </section>
 
       {/* PREVIEW / SHOWCASE SECTION */}
-      <section className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-150">
+      <section className="relative z-10 px-4 sm:px-6 lg:px-8 pb-14 sm:pb-20 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-150">
         <div className="max-w-6xl mx-auto rounded-2xl overflow-hidden border border-[#D4AF37]/30 bg-black/60 backdrop-blur-md shadow-2xl relative group">
           <div className="absolute inset-0 bg-gradient-to-tr from-[#FFD700]/10 via-transparent to-[#FFD700]/5 pointer-events-none"></div>
-          <div className="aspect-video flex flex-col items-center justify-center text-center p-6 relative z-10">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] flex items-center justify-center shadow-lg shadow-[#FFD700]/30 mb-6 text-black text-3xl font-bold">
+          <div className="p-6 sm:p-10 min-h-[220px] sm:aspect-video flex flex-col items-center justify-center text-center relative z-10">
+            <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] flex items-center justify-center shadow-lg shadow-[#FFD700]/30 mb-4 sm:mb-6 text-black text-2xl sm:text-3xl font-bold">
               📝
             </div>
-            <h2 className="text-3xl font-extrabold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent">
               End-to-End Content Operations
             </h2>
-            <p className="text-gray-300 mt-3 max-w-xl text-base leading-relaxed">
+            <p className="text-gray-300 mt-2 sm:mt-3 max-w-xl text-xs sm:text-base leading-relaxed">
               Scale your brand authority with strategic planning, flawless execution, and multi-platform content distribution.
             </p>
           </div>
@@ -169,18 +169,18 @@ export default function ContentManagement() {
       </section>
 
       {/* WHAT WE DELIVER SECTION */}
-      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-16 bg-black/30 border-y border-white/5 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-300">
+      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-black/30 border-y border-white/5 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-300">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold">What Content We Deliver</h2>
-            <p className="text-gray-400 mt-2">End-to-end content operations that scale with your business.</p>
+          <div className="text-center mb-8 sm:mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold">What Content We Deliver</h2>
+            <p className="text-gray-400 text-xs sm:text-base mt-2">End-to-end content operations that scale with your business.</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {designItems.map(([icon, title, text]) => (
-              <article key={title} className="p-6 rounded-xl bg-[#0a0a0a]/75 backdrop-blur border border-zinc-800 hover:border-[#D4AF37]/45 transition-colors">
-                <div className="text-3xl mb-4">{icon}</div>
-                <h3 className="font-bold text-lg text-[#FFFACD]">{title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mt-2">{text}</p>
+              <article key={title} className="p-5 sm:p-6 rounded-xl bg-[#0a0a0a]/75 backdrop-blur border border-zinc-800 hover:border-[#D4AF37]/45 transition-colors">
+                <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">{icon}</div>
+                <h3 className="font-bold text-base sm:text-lg text-[#FFFACD]">{title}</h3>
+                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mt-2">{text}</p>
               </article>
             ))}
           </div>
@@ -188,22 +188,27 @@ export default function ContentManagement() {
       </section>
 
       {/* PRICING SECTION */}
-      <section id="pricing" className="relative z-10 px-4 sm:px-6 lg:px-8 py-20 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-400">
+      <section id="pricing" className="relative z-10 px-4 sm:px-6 lg:px-8 py-14 sm:py-20 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-400">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold">Custom Pricing</h2>
-            <p className="text-gray-400 mt-2">Built Around Your Content Needs — tailored plans to fit your volume and goals.</p>
+          <div className="text-center mb-8 sm:mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold">Custom Pricing</h2>
+            <p className="text-gray-400 text-xs sm:text-base mt-2">Built Around Your Content Needs — tailored plans to fit your volume and goals.</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-7 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7 max-w-4xl mx-auto">
             {designPlans.map((plan) => (
-              <article key={plan.name} className={`relative p-7 rounded-2xl backdrop-blur-md border ${plan.popular ? 'border-[#D4AF37] bg-[#1a1608]/80' : 'border-zinc-700 bg-[#0a0a0a]/80'}`}>
+              <article key={plan.name} className={`relative p-6 sm:p-7 rounded-2xl backdrop-blur-md border ${plan.popular ? 'border-[#D4AF37] bg-[#1a1608]/80' : 'border-zinc-700 bg-[#0a0a0a]/80'}`}>
                 {plan.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#D4AF37] text-black text-xs font-bold">Popular</span>}
-                <h3 className="text-xl font-bold">{plan.name}</h3>
-                <p className="text-3xl font-extrabold text-[#FFD700] mt-3">{plan.price}</p>
-                <ul className="my-6 space-y-3 text-sm text-gray-300">
-                  {plan.features.map((feature) => <li key={feature}>✓ <span className="ml-2">{feature}</span></li>)}
+                <h3 className="text-lg sm:text-xl font-bold">{plan.name}</h3>
+                <p className="text-2xl sm:text-3xl font-extrabold text-[#FFD700] mt-3">{plan.price}</p>
+                <ul className="my-5 sm:my-6 space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-gray-300">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-start">
+                      <span className="text-[#FFD700] mr-2">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
                 </ul>
-                <a href={whatsappLink(`Hi Aivon Tech, I want to discuss my content strategy for the ${plan.name} plan.`)} target="_blank" rel="noreferrer" className="block text-center rounded-full py-3 font-semibold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black">💬 Discuss Your Content Strategy</a>
+                <a href={whatsappLink(`Hi Aivon Tech, I want to discuss my content strategy for the ${plan.name} plan.`)} target="_blank" rel="noreferrer" className="block text-center rounded-full py-3.5 sm:py-3 font-semibold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black hover:scale-105 active:scale-95 transition-transform">💬 Discuss Your Content Strategy</a>
               </article>
             ))}
           </div>
@@ -211,47 +216,47 @@ export default function ContentManagement() {
       </section>
 
       {/* REVIEWS & FILTERS SECTION */}
-      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-16 bg-black/30 border-y border-white/5 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-500">
+      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-black/30 border-y border-white/5 scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-500">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="text-[#FFD700] font-semibold text-sm tracking-widest">CLIENT REVIEWS</p>
-            <h2 className="text-3xl font-bold mt-2">Client Reviews for Content Management</h2>
-            <p className="text-gray-400 mt-2">300+ verified reviews from businesses we've helped</p>
+          <div className="text-center mb-8 sm:mb-10">
+            <p className="text-[#FFD700] font-semibold text-xs sm:text-sm tracking-widest">CLIENT REVIEWS</p>
+            <h2 className="text-2xl sm:text-3xl font-bold mt-2">Client Reviews for Content Management</h2>
+            <p className="text-gray-400 text-xs sm:text-base mt-2">300+ verified reviews from businesses we've helped</p>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between bg-[#0a0a0c]/80 border border-[#D4AF37]/30 p-6 rounded-2xl mb-10 gap-6 backdrop-blur-md">
+          <div className="flex flex-col md:flex-row items-center justify-between bg-[#0a0a0c]/80 border border-[#D4AF37]/30 p-4 sm:p-6 rounded-2xl mb-8 sm:mb-10 gap-5 sm:gap-6 backdrop-blur-md">
             <div className="text-center md:text-left flex items-center gap-4">
-              <strong className="text-5xl font-extrabold text-white">4.5</strong>
+              <strong className="text-4xl sm:text-5xl font-extrabold text-white">4.5</strong>
               <div>
-                <div className="text-amber-400 text-lg mb-1"><Stars rating={5} /></div>
-                <p className="text-gray-400 text-sm">300 verified reviews</p>
+                <div className="text-amber-400 text-base sm:text-lg mb-1"><Stars rating={5} /></div>
+                <p className="text-gray-400 text-xs sm:text-sm">300 verified reviews</p>
               </div>
             </div>
             
             <div className="flex flex-wrap gap-2 justify-center">
-              <button onClick={() => handleFilterChange('All')} className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${filterRating === 'All' ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>All</button>
-              <button onClick={() => handleFilterChange(5)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filterRating === 5 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>5 ★ (190)</button>
-              <button onClick={() => handleFilterChange(4)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filterRating === 4 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>4 ★ (75)</button>
-              <button onClick={() => handleFilterChange(3)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filterRating === 3 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>3 ★ (35)</button>
+              <button onClick={() => handleFilterChange('All')} className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold transition-colors ${filterRating === 'All' ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>All</button>
+              <button onClick={() => handleFilterChange(5)} className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors ${filterRating === 5 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>5 ★ (190)</button>
+              <button onClick={() => handleFilterChange(4)} className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors ${filterRating === 4 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>4 ★ (75)</button>
+              <button onClick={() => handleFilterChange(3)} className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors ${filterRating === 3 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}>3 ★ (35)</button>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-8 sm:mb-10">
             {currentReviews.length > 0 ? (
               currentReviews.map((rev) => (
-                <article key={rev.id} className="p-5 rounded-xl bg-[#0a0a0a]/80 border border-zinc-800 flex flex-col justify-between">
+                <article key={rev.id} className="p-4 sm:p-5 rounded-xl bg-[#0a0a0a]/80 border border-zinc-800 flex flex-col justify-between">
                   <div>
                     <div className="flex gap-3 items-center">
-                      <span className="w-10 h-10 rounded-full bg-[#D4AF37]/20 text-[#FFD700] font-bold flex items-center justify-center">{rev.initials}</span>
+                      <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#D4AF37]/20 text-[#FFD700] font-bold flex items-center justify-center text-xs sm:text-sm">{rev.initials}</span>
                       <div>
-                        <h3 className="font-semibold text-sm">{rev.name}</h3>
-                        <p className="text-xs text-gray-500">{rev.location}</p>
+                        <h3 className="font-semibold text-xs sm:text-sm">{rev.name}</h3>
+                        <p className="text-[11px] sm:text-xs text-gray-500">{rev.location}</p>
                       </div>
                     </div>
-                    <div className="mt-4"><Stars rating={rev.rating} /></div>
-                    <p className="text-sm text-gray-400 leading-relaxed mt-3">"{rev.text}"</p>
+                    <div className="mt-3 sm:mt-4"><Stars rating={rev.rating} /></div>
+                    <p className="text-xs sm:text-sm text-gray-400 leading-relaxed mt-2.5 sm:mt-3">"{rev.text}"</p>
                   </div>
-                  <p className="text-xs text-[#D4AF37] mt-4 font-medium">✓ Verified Client</p>
+                  <p className="text-[11px] sm:text-xs text-[#D4AF37] mt-3 sm:mt-4 font-medium">✓ Verified Client</p>
                 </article>
               ))
             ) : (
@@ -260,19 +265,19 @@ export default function ContentManagement() {
           </div>
 
           {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-2 flex-wrap">
+            <div className="flex justify-center items-center gap-1.5 sm:gap-2 flex-wrap">
               {currentPage > 1 && (
-                <button onClick={() => setCurrentPage(currentPage - 1)} className="px-3 h-10 bg-zinc-900 hover:bg-zinc-800 text-gray-300 border border-zinc-800 rounded-lg font-medium text-sm transition-colors">← Prev</button>
+                <button onClick={() => setCurrentPage(currentPage - 1)} className="px-2.5 sm:px-3 h-9 sm:h-10 bg-zinc-900 hover:bg-zinc-800 text-gray-300 border border-zinc-800 rounded-lg font-medium text-xs sm:text-sm transition-colors cursor-pointer">← Prev</button>
               )}
               {getPageNumbers().map((item, index) => 
                 item === '...' ? (
-                  <span key={`dots-${index}`} className="px-3 py-2 text-gray-500 font-bold">...</span>
+                  <span key={`dots-${index}`} className="px-2 sm:px-3 py-1 text-gray-500 font-bold text-xs sm:text-sm">...</span>
                 ) : (
-                  <button key={item} onClick={() => setCurrentPage(item)} className={`w-10 h-10 rounded-lg font-bold text-sm transition-colors ${currentPage === item ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:bg-zinc-800'}`}>{item}</button>
+                  <button key={item} onClick={() => setCurrentPage(item)} className={`w-9 sm:w-10 h-9 sm:h-10 rounded-lg font-bold text-xs sm:text-sm transition-colors cursor-pointer ${currentPage === item ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:bg-zinc-800'}`}>{item}</button>
                 )
               )}
               {currentPage < totalPages && (
-                <button onClick={() => setCurrentPage(currentPage + 1)} className="px-3 h-10 bg-zinc-900 hover:bg-zinc-800 text-gray-300 border border-zinc-800 rounded-lg font-medium text-sm transition-colors">Next →</button>
+                <button onClick={() => setCurrentPage(currentPage + 1)} className="px-2.5 sm:px-3 h-9 sm:h-10 bg-zinc-900 hover:bg-zinc-800 text-gray-300 border border-zinc-800 rounded-lg font-medium text-xs sm:text-sm transition-colors cursor-pointer">Next →</button>
               )}
             </div>
           )}
@@ -280,11 +285,11 @@ export default function ContentManagement() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-20 text-center scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-600">
-        <div className="max-w-3xl mx-auto rounded-2xl p-8 sm:p-12 bg-[#111]/75 border border-[#D4AF37]/30 backdrop-blur-md">
-          <h2 className="text-3xl font-bold">Ready to Build a Content Engine?</h2>
-          <p className="text-gray-400 mt-3">Turn your copy into a growth machine. Drive free traffic and build trust today.</p>
-          <a href={whatsappLink("Hi Aivon Tech, I'm ready to start my content management project. Let's talk!")} target="_blank" rel="noreferrer" className="inline-block mt-7 rounded-full px-7 py-3 font-semibold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black">Get Started Today →</a>
+      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-14 sm:py-20 text-center scroll-animate opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-600">
+        <div className="max-w-3xl mx-auto rounded-2xl p-6 sm:p-8 md:p-12 bg-[#111]/75 border border-[#D4AF37]/30 backdrop-blur-md">
+          <h2 className="text-2xl sm:text-3xl font-bold">Ready to Build a Content Engine?</h2>
+          <p className="text-gray-400 text-xs sm:text-base mt-2.5 sm:mt-3">Turn your copy into a growth machine. Drive free traffic and build trust today.</p>
+          <a href={whatsappLink("Hi Aivon Tech, I'm ready to start my content management project. Let's talk!")} target="_blank" rel="noreferrer" className="inline-block w-full sm:w-auto mt-6 sm:mt-7 rounded-full px-7 py-3.5 sm:py-3 font-semibold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black hover:scale-105 active:scale-95 transition-transform">Get Started Today →</a>
         </div>
       </section>
     </main>

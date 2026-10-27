@@ -1,22 +1,22 @@
 import React from "react";
+import { Phone } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#040406] text-slate-300 border-t border-[#D4AF37]/20 pt-16 pb-8 px-6 lg:px-8 overflow-hidden z-10">
+    <footer className="relative bg-[#040406] text-slate-300 border-t border-[#D4AF37]/20 pt-12 sm:pt-16 pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden z-10">
       {/* Subtle ambient lighting flares behind the footer columns */}
       <div className="absolute -bottom-20 -left-20 w-[300px] h-[300px] bg-[#D4AF37]/3 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute top-10 -right-20 w-[250px] h-[250px] bg-amber-500/2 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
-        {}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-slate-900">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 pb-12 border-b border-slate-900">
           {/* COLUMN 1: BRAND LOGO, DESCRIPTION & MSME CERTIFICATE */}
-          <div className="space-y-6">
+          <div className="space-y-5 sm:space-y-6">
             <div className="flex items-center gap-3">
               {/* Interlocking Monogram custom golden icon */}
-              <div className="relative border border-[#D4AF37]/35 w-10 h-10 rounded-full flex items-center justify-center bg-[#07070a] shadow-[0_0_15px_rgba(212,175,55,0.1)]">
+              <div className="relative border border-[#D4AF37]/35 w-10 h-10 rounded-full flex items-center justify-center bg-[#07070a] shadow-[0_0_15px_rgba(212,175,55,0.1)] flex-shrink-0">
                 <svg
                   className="w-5 h-5 text-[#D4AF37]"
                   fill="none"
@@ -50,7 +50,7 @@ export default function Footer() {
             {/* MSME-Certified Badge Row with custom gold seal icon */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg bg-[#D4AF37]/5 border border-[#D4AF37]/20 text-[9.5px] font-bold text-[#FFD700] tracking-widest uppercase shadow-[0_0_10px_rgba(212,175,55,0.05)]">
               <svg
-                className="w-4 h-4"
+                className="w-4 h-4 flex-shrink-0"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -58,11 +58,11 @@ export default function Footer() {
               >
                 <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
-              MSME Certified • Govt. Registered
+              <span>MSME Certified • Govt. Registered</span>
             </div>
           </div>
 
-          {}
+          {/* COLUMN 2: SERVICES */}
           <div className="space-y-4">
             <h3 className="text-[10px] font-bold tracking-[0.25em] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine font-serif uppercase border-l border-[#D4AF37] pl-3">
               Services
@@ -143,7 +143,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {}
+          {/* COLUMN 3: QUICK LINKS */}
           <div className="space-y-4">
             <h3 className="text-[10px] font-bold tracking-[0.25em] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine font-serif uppercase border-l border-[#D4AF37] pl-3">
               Quick Links
@@ -151,7 +151,7 @@ export default function Footer() {
             <ul className="space-y-3 text-xs text-slate-400">
               <li>
                 <a
-                  href="#about"
+                  href="/#about"
                   className="hover:text-white transition-colors flex items-center gap-1.5 group"
                 >
                   <span className="w-1 h-1 bg-slate-700 rounded-full group-hover:bg-[#D4AF37] transition-all" />
@@ -160,7 +160,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="/#services"
                   className="hover:text-white transition-colors flex items-center gap-1.5 group"
                 >
                   <span className="w-1 h-1 bg-slate-700 rounded-full group-hover:bg-[#D4AF37] transition-all" />
@@ -197,15 +197,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {}
-          <div className="space-y-5">
+          {/* COLUMN 4: CONTACT US */}
+          <div className="space-y-4 sm:space-y-5">
             <h3 className="text-[10px] font-bold tracking-[0.25em] bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine font-serif uppercase border-l border-[#D4AF37] pl-3 ">
               Contact Us
             </h3>
             <ul className="space-y-3.5 text-xs text-slate-400">
-              <li className="flex items-center gap-2.5 hover:text-white transition-colors group">
+              <li className="flex items-start gap-2.5 hover:text-white transition-colors group">
                 <svg
-                  className="w-4 h-4 text-[#FFD700]"
+                  className="w-4 h-4 text-[#FFD700] flex-shrink-0 mt-0.5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -218,39 +218,18 @@ export default function Footer() {
                   />
                 </svg>
                 <a 
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=theaivontech001@gmail.com" 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=theaivontech@gmail.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  className="break-all"
                 >
-                  theaivontech001@gmail.com
-                </a>
-              </li>
-              <li className="flex items-center gap-2.5 hover:text-white transition-colors group">
-                <svg
-                  className="w-4 h-4 text-[#FFD700]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636l3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
-                  />
-                </svg>
-                <a 
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=theaivontech001@gmail.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  theaivontech001@gmail.com
+                  theaivontech@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5 hover:text-white transition-colors group">
                 {/* Custom SVG WhatsApp style icon */}
                 <svg
-                  className="w-4 h-4 text-[#FFD700]"
+                  className="w-4 h-4 text-[#FFD700] flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -264,12 +243,17 @@ export default function Footer() {
                   WhatsApp Support
                 </a>
               </li>
+              <li className="flex items-center gap-2.5 hover:text-white transition-colors group">
+                <Phone className="w-4 h-4 text-[#FFD700] flex-shrink-0" />
+                <a href="tel:+918789963987">
+                  +91 8789963987
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
-        {}
-        <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-4 text-center md:text-left">
           {/* Copyright section */}
           <div className="text-[10px] tracking-widest text-slate-500 uppercase">
             © {currentYear}{" "}
@@ -278,9 +262,9 @@ export default function Footer() {
           </div>
 
           {/* Creators / Dedication Credit */}
-          <div className="flex items-center gap-1.5 text-xs text-slate-400 bg-slate-950/40 border border-slate-900 px-4 py-2 rounded-full">
+          <div className="flex items-center gap-1.5 text-xs text-slate-400 bg-slate-950/40 border border-slate-900 px-3.5 sm:px-4 py-2 rounded-full">
             <svg
-              className="w-3.5 h-3.5 text-[#FFD700] fill-[#D4AF37]/10 animate-pulse"
+              className="w-3.5 h-3.5 text-[#FFD700] fill-[#D4AF37]/10 animate-pulse flex-shrink-0"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -299,7 +283,7 @@ export default function Footer() {
           </div>
 
           {/* Bottom Policy Tags */}
-          <div className="flex gap-4 text-[10px] tracking-wider text-slate-500 uppercase">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-[10px] tracking-wider text-slate-500 uppercase">
             <a
               href="/terms"
               className="hover:text-[#FFD700] transition-all"

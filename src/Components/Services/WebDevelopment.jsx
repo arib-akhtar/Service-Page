@@ -172,22 +172,22 @@ const WebDevelopment = () => {
       `}</style>
 
       {/* 1. HERO SECTION */}
-      <section className="relative z-10 scroll-fade max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12 text-center">
+      <section className="relative z-10 scroll-fade max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-10 sm:pb-12 text-center">
         <span className="text-xs uppercase tracking-widest text-[#FFD700] font-semibold bg-[#FFD700]/10 px-3 py-1 rounded-full border border-[#FFD700]/20">
           Stream C: Tech & Automation
         </span>
-        <h1 className="text-4xl sm:text-6xl font-extrabold mt-6 bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mt-4 sm:mt-6 bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine pb-2">
           Web Development
         </h1>
-        <p className="mt-4 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+        <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
           Get responsive sites, online shops, and custom web apps. We build sites that load fast, rank high, and get buyers.
         </p>
 
         {/* Action Buttons */}
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
           <Link
             to="/hireme"
-            className="bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black px-8 py-3 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-lg"
+            className="w-full sm:w-auto text-center bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black px-8 py-3 rounded-full font-medium hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg"
           >
             Get a Quote
           </Link>
@@ -195,7 +195,7 @@ const WebDevelopment = () => {
             href={whatsappLink("Hi Aivon Tech, I'm interested in your Web Development services.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-[#FFD700]/40 text-[#FFD700] px-8 py-3 rounded-full font-medium bg-black/30 backdrop-blur hover:bg-[#FFD700]/10 transition-all duration-300 flex items-center gap-2"
+            className="w-full sm:w-auto text-center border border-[#FFD700]/40 text-[#FFD700] px-8 py-3 rounded-full font-medium bg-black/30 backdrop-blur hover:bg-[#FFD700]/10 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2"
           >
             💬 Chat on WhatsApp
           </a>
@@ -203,51 +203,51 @@ const WebDevelopment = () => {
       </section>
 
       {/* 2. WHAT WE BUILD SECTION */}
-      <section className="relative z-10 scroll-fade max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5 bg-black/30 backdrop-blur-sm">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine">
+      <section className="relative z-10 scroll-fade max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-t border-white/5 bg-black/30 backdrop-blur-sm">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine">
             What We Build
           </h2>
-          <p className="mt-3 text-gray-400 text-lg">
+          <p className="mt-2 sm:mt-3 text-gray-400 text-sm sm:text-base md:text-lg">
             High-performance web solutions that grow with your business
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feat, idx) => (
             <div
               key={idx}
-              className="image-zoom-reveal bg-[#0a0a0c]/80 backdrop-blur-md border border-[#FFD700]/15 rounded-2xl p-8 hover:border-[#FFD700]/50 transition-all duration-300 group"
+              className="image-zoom-reveal bg-[#0a0a0c]/80 backdrop-blur-md border border-[#FFD700]/15 rounded-2xl p-6 sm:p-8 hover:border-[#FFD700]/50 transition-all duration-300 group"
             >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300 inline-block">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 inline-block">
                 {feat.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[#FFD700] transition-colors">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 group-hover:text-[#FFD700] transition-colors">
                 {feat.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{feat.description}</p>
+              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{feat.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* 3. CUSTOM PRICING SECTION */}
-      <section className="relative z-10 scroll-fade max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="image-zoom-reveal bg-gradient-to-br from-[#0a0a0c]/90 to-[#121216]/90 backdrop-blur-md border border-[#FFD700]/30 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
+      <section className="relative z-10 scroll-fade max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="image-zoom-reveal bg-gradient-to-br from-[#0a0a0c]/90 to-[#121216]/90 backdrop-blur-md border border-[#FFD700]/30 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-center relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 transform translate-x-8 -translate-y-8 w-48 h-48 bg-[#FFD700]/5 rounded-full blur-3xl"></div>
           
-          <span className="text-[#FFD700] text-sm uppercase tracking-wider font-semibold">Custom Pricing</span>
-          <h2 className="text-3xl sm:text-4xl font-bold mt-2 bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine pb-1">
+          <span className="text-[#FFD700] text-xs sm:text-sm uppercase tracking-wider font-semibold">Custom Pricing</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine pb-1">
             Engineered for Your Needs
           </h2>
-          <p className="mt-4 text-gray-400 max-w-xl mx-auto text-base">
+          <p className="mt-3 sm:mt-4 text-gray-400 max-w-xl mx-auto text-xs sm:text-base leading-relaxed">
             Whether you need a simple landing page or a custom web app, we build to fit your needs. Let's talk about your project goals.
           </p>
 
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
             <Link
               to="/hireme"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black px-8 py-3.5 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-md"
+              className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black px-8 py-3.5 rounded-full font-semibold hover:scale-105 active:scale-95 transition-all duration-300 shadow-md"
             >
               💬 Discuss Your Project
             </Link>
@@ -256,47 +256,47 @@ const WebDevelopment = () => {
       </section>
 
       {/* 4. CLIENT REVIEWS & FILTERS SECTION */}
-      <section className="relative z-10 scroll-fade max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5 bg-black/30 backdrop-blur-sm">
-        <div className="text-center mb-12">
-          <p className="text-[#FFD700] font-semibold text-sm tracking-widest mb-2">CLIENT REVIEWS</p>
-          <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine">
+      <section className="relative z-10 scroll-fade max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-t border-white/5 bg-black/30 backdrop-blur-sm">
+        <div className="text-center mb-8 sm:mb-12">
+          <p className="text-[#FFD700] font-semibold text-xs sm:text-sm tracking-widest mb-1.5 sm:mb-2">CLIENT REVIEWS</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine">
             Client Reviews for Web Development
           </h2>
-          <p className="mt-2 text-gray-400">300+ verified reviews from businesses we've helped</p>
+          <p className="mt-2 text-gray-400 text-xs sm:text-base">300+ verified reviews from businesses we've helped</p>
         </div>
 
         {/* Rating Overview & Filters Box */}
-        <div className="flex flex-col md:flex-row items-center justify-between bg-[#0a0a0c]/80 border border-[#D4AF37]/30 p-6 rounded-2xl mb-10 gap-6 backdrop-blur-md max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between bg-[#0a0a0c]/80 border border-[#D4AF37]/30 p-4 sm:p-6 rounded-2xl mb-8 sm:mb-10 gap-5 sm:gap-6 backdrop-blur-md max-w-5xl mx-auto">
           <div className="text-center md:text-left flex items-center gap-4">
-            <strong className="text-5xl font-extrabold text-white">4.5</strong>
+            <strong className="text-4xl sm:text-5xl font-extrabold text-white">4.5</strong>
             <div>
-              <div className="text-amber-400 text-lg mb-1"><Stars rating={5} /></div>
-              <p className="text-gray-400 text-sm">300 verified reviews</p>
+              <div className="text-amber-400 text-base sm:text-lg mb-1"><Stars rating={5} /></div>
+              <p className="text-gray-400 text-xs sm:text-sm">300 verified reviews</p>
             </div>
           </div>
           
           <div className="flex flex-wrap gap-2 justify-center">
             <button 
               onClick={() => handleFilterChange('All')} 
-              className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${filterRating === 'All' ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold transition-colors ${filterRating === 'All' ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}
             >
               All
             </button>
             <button 
               onClick={() => handleFilterChange(5)} 
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filterRating === 5 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors ${filterRating === 5 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}
             >
               5 ★ (179)
             </button>
             <button 
               onClick={() => handleFilterChange(4)} 
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filterRating === 4 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors ${filterRating === 4 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}
             >
               4 ★ (90)
             </button>
             <button 
               onClick={() => handleFilterChange(3)} 
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filterRating === 3 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors ${filterRating === 3 ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black font-semibold' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:border-[#D4AF37]/40'}`}
             >
               3 ★ (31)
             </button>
@@ -304,23 +304,23 @@ const WebDevelopment = () => {
         </div>
 
         {/* Reviews Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-8 sm:mb-10 max-w-6xl mx-auto">
           {currentReviews.length > 0 ? (
             currentReviews.map((rev) => (
-              <article key={rev.id} className="p-5 rounded-xl bg-[#0a0a0a]/80 border border-zinc-800 flex flex-col justify-between">
+              <article key={rev.id} className="p-4 sm:p-5 rounded-xl bg-[#0a0a0a]/80 border border-zinc-800 flex flex-col justify-between">
                 <div>
                   <div className="flex gap-3 items-center">
-                    <span className="w-10 h-10 rounded-full bg-[#D4AF37]/20 text-[#FFD700] font-bold flex items-center justify-center">{rev.initials}</span>
+                    <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#D4AF37]/20 text-[#FFD700] font-bold flex items-center justify-center text-xs sm:text-sm">{rev.initials}</span>
                     <div>
-                      <h3 className="font-semibold text-sm">{rev.name}</h3>
-                      <p className="text-xs text-gray-500">{rev.location}</p>
+                      <h3 className="font-semibold text-xs sm:text-sm">{rev.name}</h3>
+                      <p className="text-[11px] sm:text-xs text-gray-500">{rev.location}</p>
                     </div>
                   </div>
-                  <div className="mt-4"><Stars rating={rev.rating} /></div>
-                  <p className="text-sm text-gray-400 leading-relaxed mt-3">"{rev.text}"</p>
+                  <div className="mt-3 sm:mt-4"><Stars rating={rev.rating} /></div>
+                  <p className="text-xs sm:text-sm text-gray-400 leading-relaxed mt-2.5 sm:mt-3">"{rev.text}"</p>
                 </div>
                 {rev.verified && (
-                  <p className="text-xs text-[#D4AF37] mt-4 font-medium">✓ Verified Client</p>
+                  <p className="text-[11px] sm:text-xs text-[#D4AF37] mt-3 sm:mt-4 font-medium">✓ Verified Client</p>
                 )}
               </article>
             ))
@@ -331,11 +331,11 @@ const WebDevelopment = () => {
 
         {/* Pagination Controls */}
         {totalPages > 1 && (
-          <div className="flex justify-center items-center gap-2 flex-wrap">
+          <div className="flex justify-center items-center gap-1.5 sm:gap-2 flex-wrap">
             {currentPage > 1 && (
               <button
                 onClick={() => setCurrentPage(currentPage - 1)}
-                className="px-3 h-10 bg-zinc-900 hover:bg-zinc-800 text-gray-300 border border-zinc-800 rounded-lg font-medium text-sm transition-colors"
+                className="px-2.5 sm:px-3 h-9 sm:h-10 bg-zinc-900 hover:bg-zinc-800 text-gray-300 border border-zinc-800 rounded-lg font-medium text-xs sm:text-sm transition-colors cursor-pointer"
               >
                 ← Prev
               </button>
@@ -343,12 +343,12 @@ const WebDevelopment = () => {
 
             {getPageNumbers().map((item, index) => 
               item === '...' ? (
-                <span key={`dots-${index}`} className="px-3 py-2 text-gray-500 font-bold">...</span>
+                <span key={`dots-${index}`} className="px-2 sm:px-3 py-1 text-gray-500 font-bold text-xs sm:text-sm">...</span>
               ) : (
                 <button
                   key={item}
                   onClick={() => setCurrentPage(item)}
-                  className={`w-10 h-10 rounded-lg font-bold text-sm transition-colors ${currentPage === item ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:bg-zinc-800'}`}
+                  className={`w-9 sm:w-10 h-9 sm:h-10 rounded-lg font-bold text-xs sm:text-sm transition-colors cursor-pointer ${currentPage === item ? 'bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black' : 'bg-zinc-900 text-gray-300 border border-zinc-800 hover:bg-zinc-800'}`}
                 >
                   {item}
                 </button>
@@ -358,7 +358,7 @@ const WebDevelopment = () => {
             {currentPage < totalPages && (
               <button
                 onClick={() => setCurrentPage(currentPage + 1)}
-                className="px-3 h-10 bg-zinc-900 hover:bg-zinc-800 text-gray-300 border border-zinc-800 rounded-lg font-medium text-sm transition-colors"
+                className="px-2.5 sm:px-3 h-9 sm:h-10 bg-zinc-900 hover:bg-zinc-800 text-gray-300 border border-zinc-800 rounded-lg font-medium text-xs sm:text-sm transition-colors cursor-pointer"
               >
                 Next →
               </button>
@@ -368,20 +368,20 @@ const WebDevelopment = () => {
       </section>
 
       {/* 5. FOOTER CALL TO ACTION (In Box) */}
-      <section className="relative z-10 scroll-fade max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <div className="image-zoom-reveal bg-[#0a0a0c]/80 border border-[#FFD700]/30 rounded-3xl p-8 sm:p-12 backdrop-blur-md shadow-2xl relative overflow-hidden">
+      <section className="relative z-10 scroll-fade max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center">
+        <div className="image-zoom-reveal bg-[#0a0a0c]/80 border border-[#FFD700]/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 backdrop-blur-md shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 transform translate-x-8 -translate-y-8 w-48 h-48 bg-[#FFD700]/5 rounded-full blur-3xl"></div>
           
-          <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine pb-1">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] bg-clip-text text-transparent animate-shine pb-1">
             Ready to Build Something Exceptional?
           </h2>
-          <p className="mt-3 text-gray-400 max-w-lg mx-auto">
+          <p className="mt-2.5 sm:mt-3 text-gray-400 max-w-lg mx-auto text-xs sm:text-base">
             From concept to launch, we build web solutions that perform, convert, and scale.
           </p>
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
             <Link
               to="/hireme"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black px-8 py-3.5 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
+              className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-gradient-to-r from-[#FFD700] via-[#FFFACD] to-[#FFD700] text-black px-8 py-3.5 rounded-full font-semibold hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg"
             >
               💬 Start Your Project
             </Link>

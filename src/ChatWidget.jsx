@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { X, Send, Bot, MessageCircle } from 'lucide-react';
 
 const ChatWidget = () => {
@@ -8,6 +8,14 @@ const ChatWidget = () => {
   ]);
   const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(false);
+  const chatEndRef = useRef(null);
+
+  // Auto-scroll chat to latest message
+  useEffect(() => {
+    if (isOpen) {
+      chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, loading, isOpen]);
 
   // Smart local responses
   const getSmartReply = (query) => {
@@ -39,21 +47,43 @@ const ChatWidget = () => {
 
     try {
       const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+      if (!apiKey) {
+        throw new Error('VITE_GEMINI_API_KEY is not defined in environment');
+      }
       
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: textToSend }] }]
-        })
-      });
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            system_instruction: {
+              parts: [
+                {
+                  text: "You are Aivon Tech GPT, the official AI assistant for Aivon Tech (an MSME-certified digital services and web development agency). Help clients with web development, AI automation, marketing, graphic design, and video editing. Be professional, concise, and guide users to WhatsApp for custom quotes."
+                }
+              ]
+            },
+            contents: [
+              {
+                parts: [{ text: textToSend }]
+              }
+            ]
+          })
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Gemini API HTTP Error: ${response.status}`);
+      }
 
       const data = await response.json();
       
       let botReply = "";
       if (textToSend.toLowerCase().includes('human') || textToSend.toLowerCase().includes('whatsapp') || textToSend.toLowerCase().includes('talk')) {
         botReply = "whatsapp_link";
-      } else if (data.candidates && data.candidates[0].content.parts[0].text) {
+      } else if (data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
         botReply = data.candidates[0].content.parts[0].text;
       } else {
         botReply = getSmartReply(textToSend);
@@ -64,7 +94,10 @@ const ChatWidget = () => {
         { sender: 'bot', text: botReply }
       ]);
     } catch (error) {
-      const fallbackReply = textToSend.toLowerCase().includes('human') || textToSend.toLowerCase().includes('whatsapp') ? "whatsapp_link" : getSmartReply(textToSend);
+      console.warn("Gemini API request failed, gracefully falling back to smart local response:", error);
+      const fallbackReply = textToSend.toLowerCase().includes('human') || textToSend.toLowerCase().includes('whatsapp') || textToSend.toLowerCase().includes('talk')
+        ? "whatsapp_link" 
+        : getSmartReply(textToSend);
       setMessages((prev) => [
         ...prev,
         { sender: 'bot', text: fallbackReply }
@@ -79,9 +112,9 @@ const ChatWidget = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 font-sans">
+    <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 font-sans">
       {isOpen && (
-        <div className="w-[360px] sm:w-[380px] bg-[#090d16] text-white rounded-2xl shadow-2xl border border-amber-500/30 flex flex-col overflow-hidden mb-4 transition-all duration-300 animate-in fade-in slide-in-from-bottom-5">
+        <div className="w-[calc(100vw-2rem)] sm:w-[380px] max-w-[380px] bg-[#090d16] text-white rounded-2xl shadow-2xl border border-amber-500/30 flex flex-col overflow-hidden mb-4 transition-all duration-300 animate-in fade-in slide-in-from-bottom-5">
           {/* Header */}
           <div className="bg-[#121824] px-4 py-3 flex items-center justify-between border-b border-amber-500/20">
             <div className="flex items-center space-x-3">
@@ -181,6 +214,7 @@ const ChatWidget = () => {
                 </button>
               </div>
             )}
+            <div ref={chatEndRef} />
           </div>
 
           {/* Footer Input */}
